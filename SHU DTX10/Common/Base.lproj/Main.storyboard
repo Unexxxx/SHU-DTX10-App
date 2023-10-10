@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SHU_DTX10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K61-Yc-umF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DTX10 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfI-NN-9j6">
+                                        <rect key="frame" x="151" y="24.666666666666671" width="91.333333333333314" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="czp-le-rRg">
+                                        <rect key="frame" x="8" y="20.333333333333336" width="35" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="kUG-Jd-j39"/>
+                                            <constraint firstAttribute="height" constant="35" id="ywY-0A-Up9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-Nw-WXC">
+                                        <rect key="frame" x="350" y="18.000000000000004" width="35" height="34.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="EFp-YE-h3H"/>
+                                            <constraint firstAttribute="height" constant="35" id="XmT-7Q-Hwt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="czp-le-rRg" firstAttribute="centerY" secondItem="K61-Yc-umF" secondAttribute="centerY" id="2H1-Gx-zgz"/>
+                                    <constraint firstItem="bO6-Nw-WXC" firstAttribute="centerY" secondItem="K61-Yc-umF" secondAttribute="centerY" id="C7l-8D-IHF"/>
+                                    <constraint firstAttribute="trailing" secondItem="bO6-Nw-WXC" secondAttribute="trailing" constant="8" id="PDl-Ky-akP"/>
+                                    <constraint firstAttribute="height" constant="70" id="Va0-zG-ahw"/>
+                                    <constraint firstItem="zfI-NN-9j6" firstAttribute="centerX" secondItem="K61-Yc-umF" secondAttribute="centerX" id="W0I-Tb-nws"/>
+                                    <constraint firstItem="czp-le-rRg" firstAttribute="leading" secondItem="K61-Yc-umF" secondAttribute="leading" constant="8" id="kRq-MY-PUN"/>
+                                    <constraint firstItem="zfI-NN-9j6" firstAttribute="centerY" secondItem="K61-Yc-umF" secondAttribute="centerY" id="vhT-hb-bFL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press measure on the Bluetooth Device" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5g-6B-hQq">
+                                <rect key="frame" x="46.666666666666657" y="413" width="300" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="h28-Me-IOD"/>
+                                    <constraint firstAttribute="height" constant="51" id="yUc-th-Nmv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bluetooth Off" translatesAutoresizingMaskIntoConstraints="NO" id="eSQ-vR-f31">
+                                <rect key="frame" x="171.66666666666666" y="664" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="vrp-tV-Kda"/>
+                                    <constraint firstAttribute="height" constant="50" id="yo4-xs-Vjk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bluetooth" translatesAutoresizingMaskIntoConstraints="NO" id="Wzi-r7-ub9">
+                                <rect key="frame" x="171.66666666666666" y="664" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fpb-V9-Uft"/>
+                                    <constraint firstAttribute="width" constant="50" id="hPO-bH-iDy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jy-vp-4ur">
+                                <rect key="frame" x="138.66666666666666" y="722" width="115.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdI-NV-YH1">
+                                <rect key="frame" x="154.66666666666666" y="722" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6jy-vp-4ur" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BG7-09-NJP"/>
+                            <constraint firstItem="eSQ-vR-f31" firstAttribute="top" secondItem="d5g-6B-hQq" secondAttribute="bottom" constant="200" id="Ceg-tp-LLA"/>
+                            <constraint firstItem="6jy-vp-4ur" firstAttribute="top" secondItem="eSQ-vR-f31" secondAttribute="bottom" constant="8" symbolic="YES" id="GBN-93-21w"/>
+                            <constraint firstItem="RdI-NV-YH1" firstAttribute="top" secondItem="eSQ-vR-f31" secondAttribute="bottom" constant="8" symbolic="YES" id="J8v-yY-C4S"/>
+                            <constraint firstItem="K61-Yc-umF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a3T-YJ-GUJ"/>
+                            <constraint firstItem="K61-Yc-umF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ch4-3k-qy8"/>
+                            <constraint firstItem="RdI-NV-YH1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dqJ-Sa-Qee"/>
+                            <constraint firstItem="d5g-6B-hQq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f7b-yC-LMf"/>
+                            <constraint firstItem="Wzi-r7-ub9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hT9-VH-gdl"/>
+                            <constraint firstItem="d5g-6B-hQq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hhG-Kt-gOq"/>
+                            <constraint firstItem="Wzi-r7-ub9" firstAttribute="top" secondItem="d5g-6B-hQq" secondAttribute="bottom" constant="200" id="n71-Zf-ZL1"/>
+                            <constraint firstItem="K61-Yc-umF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rYC-ih-R90"/>
+                            <constraint firstItem="eSQ-vR-f31" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tOd-yH-ShV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bluetoothConnected" destination="RdI-NV-YH1" id="42g-rM-hdv"/>
+                        <outlet property="bluetoothDisconnected" destination="6jy-vp-4ur" id="SJc-Bk-g2a"/>
+                        <outlet property="bluetoothOff" destination="eSQ-vR-f31" id="N6N-ai-Olg"/>
+                        <outlet property="bluetoothOn" destination="Wzi-r7-ub9" id="rY8-H0-6l1"/>
+                        <outlet property="exitButton" destination="czp-le-rRg" id="Mkg-nb-GWn"/>
+                        <outlet property="measureDeviceLabel" destination="d5g-6B-hQq" id="kSC-rQ-ep8"/>
+                        <outlet property="settingsButton" destination="bO6-Nw-WXC" id="IRd-li-nEQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bluetooth" width="24" height="24"/>
+        <image name="Bluetooth Off" width="24" height="24"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
