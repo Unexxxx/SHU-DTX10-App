@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh
+${PODS_ROOT}/ThingSmartMatterKit/Build/VendorsFramework/ThingMatterSupport.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMbedtls/ThingMbedtls.framework/ThingMbedtls
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingOpenSSLSDK/ThingOpenSSLSDK.framework/ThingOpenSSLSDK

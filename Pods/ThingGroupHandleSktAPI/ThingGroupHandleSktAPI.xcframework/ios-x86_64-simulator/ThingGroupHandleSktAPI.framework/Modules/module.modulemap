@@ -1,0 +1,6 @@
+framework module ThingGroupHandleSktAPI {
+  umbrella header "ThingGroupHandleSktAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+/* Privacy - Bluetooth Always Usage Description */
+"NSBluetoothAlwaysUsageDescription" = "For better functionality, it is recommended to enable Bluetooth permission.";
+
+/* Privacy - Location Always and When In Use Usage Description */
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "For better functionality, it is recommended to enable location permission, both always and when in use.";
+
+/* Privacy - Location Always Usage Description */
+"NSLocationAlwaysUsageDescription" = "For better functionality, it is recommended to enable location permission always.";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "For better functionality, it is recommended to enable location permission when in use.";

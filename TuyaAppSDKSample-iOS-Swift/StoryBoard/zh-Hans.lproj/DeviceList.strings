@@ -1,0 +1,59 @@
+/* Class = "UILabel"; text = "Device ID"; ObjectID = "1fz-cf-P4f"; */
+"1fz-cf-P4f.text" = "Device ID";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "4GE-VC-iYe"; */
+"4GE-VC-iYe.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "Device List"; ObjectID = "8hw-cY-PzK"; */
+"8hw-cY-PzK.title" = "Device List";
+
+/* Class = "UILabel"; text = "MAC Address"; ObjectID = "9y0-Jg-cWl"; */
+"9y0-Jg-cWl.text" = "MAC Address";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "11T-VB-iBU"; */
+"11T-VB-iBU.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B3M-Vj-fmh"; */
+"B3M-Vj-fmh.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "d0r-od-8Ve"; */
+"d0r-od-8Ve.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eZf-aa-GbJ"; */
+"eZf-aa-GbJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f7z-eY-PgJ"; */
+"f7z-eY-PgJ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Device Detail"; ObjectID = "gEr-Wk-HET"; */
+"gEr-Wk-HET.title" = "Device Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "l92-Zb-eeo"; */
+"l92-Zb-eeo.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lqt-xP-Tts"; */
+"lqt-xP-Tts.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "m2H-Zb-62q"; */
+"m2H-Zb-62q.text" = "Title";
+
+/* Class = "UILabel"; text = "IP Address"; ObjectID = "mXO-J8-NOI"; */
+"mXO-J8-NOI.text" = "IP Address";
+
+/* Class = "UIButton"; normalTitle = "Remove Device"; ObjectID = "pFk-LR-atG"; */
+"pFk-LR-atG.normalTitle" = "Remove Device";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "QBC-5e-jTZ"; */
+"QBC-5e-jTZ.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "rck-fd-YXh"; */
+"rck-fd-YXh.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "VDT-34-jCX"; */
+"VDT-34-jCX.text" = "Detail";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "w7z-0N-wn4"; */
+"w7z-0N-wn4.text" = "Title";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZJg-RX-F3g"; */
+"ZJg-RX-F3g.text" = "Detail";

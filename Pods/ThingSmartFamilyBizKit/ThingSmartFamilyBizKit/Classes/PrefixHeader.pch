@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  ThingSmartFamilyBizKit
+//
+//  Created by 吴戈 on 2019/2/18.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <ThingModuleManager/ThingModule.h>
+#import <ThingModuleManager/ThingModuleManager.h>
+#import <ThingFoundationKit/ThingFoundationKit.h>
+#import <ThingSmartBaseKit/ThingSmartBaseKit.h>
+#import <ThingSmartDeviceKit/ThingSmartDeviceKit.h>
+#define  ThingTableViewConfig(tableView,block)  [tableView thing_config:block bundle:@"ThingSmartFamilyBizKit"];
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

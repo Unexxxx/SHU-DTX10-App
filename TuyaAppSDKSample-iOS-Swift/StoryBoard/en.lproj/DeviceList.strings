@@ -1,0 +1,147 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "11T-VB-iBU"; */
+"11T-VB-iBU.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1fT-rb-O0c"; */
+"1fT-rb-O0c.text" = "Label";
+
+/* Class = "UILabel"; text = "Device ID"; ObjectID = "1fz-cf-P4f"; */
+"1fz-cf-P4f.text" = "Device ID";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "4GE-VC-iYe"; */
+"4GE-VC-iYe.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5vJ-ha-ZVT"; */
+"5vJ-ha-ZVT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6BI-YD-bWm"; */
+"6BI-YD-bWm.text" = "Label";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "6eT-He-Hcb"; */
+"6eT-He-Hcb.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "7bF-JE-XvY"; */
+"7bF-JE-XvY.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Device List"; ObjectID = "8hw-cY-PzK"; */
+"8hw-cY-PzK.title" = "Device List";
+
+/* Class = "UIButton"; configuration.title = "Temporary Storage"; ObjectID = "9SP-aC-wnk"; */
+"9SP-aC-wnk.configuration.title" = "Temporary Storage";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9SP-aC-wnk"; */
+"9SP-aC-wnk.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "MAC Address"; ObjectID = "9y0-Jg-cWl"; */
+"9y0-Jg-cWl.text" = "MAC Address";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Atf-zG-Qjg"; */
+"Atf-zG-Qjg.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B3M-Vj-fmh"; */
+"B3M-Vj-fmh.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "EaH-2f-Iwj"; */
+"EaH-2f-Iwj.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Icc-WM-ahM"; */
+"Icc-WM-ahM.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JcT-Hw-fgn"; */
+"JcT-Hw-fgn.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "KZ7-At-Qop"; */
+"KZ7-At-Qop.text" = "Title";
+
+/* Class = "UITableViewController"; title = "TuyaLink Device Control"; ObjectID = "Mpz-Wr-lME"; */
+"Mpz-Wr-lME.title" = "TuyaLink Device Control";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nfh-Ij-R6d"; */
+"Nfh-Ij-R6d.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Oni-a2-LWw"; */
+"Oni-a2-LWw.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "PBo-um-jhV"; */
+"PBo-um-jhV.title" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pal-uu-XDu"; */
+"Pal-uu-XDu.text" = "Label";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "QBC-5e-jTZ"; */
+"QBC-5e-jTZ.text" = "Detail";
+
+/* Class = "UIBarButtonItem"; title = "Send"; ObjectID = "RY7-li-ejk"; */
+"RY7-li-ejk.title" = "Send";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Sje-1z-MXG"; */
+"Sje-1z-MXG.text" = "Subtitle";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "URL-6F-p4f"; */
+"URL-6F-p4f.title" = "Back";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "YF7-T5-xUe"; */
+"YF7-T5-xUe.text" = "Detail";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "ZJg-RX-F3g"; */
+"ZJg-RX-F3g.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b0U-82-Urv"; */
+"b0U-82-Urv.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "bUL-CA-SvL"; */
+"bUL-CA-SvL.title" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "d0r-od-8Ve"; */
+"d0r-od-8Ve.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eZf-aa-GbJ"; */
+"eZf-aa-GbJ.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "elp-q4-eke"; */
+"elp-q4-eke.text" = "Label";
+
+/* Class = "UILabel"; text = "Device Name"; ObjectID = "f63-c5-G5o"; */
+"f63-c5-G5o.text" = "Device Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f7z-eY-PgJ"; */
+"f7z-eY-PgJ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Device Detail"; ObjectID = "gEr-Wk-HET"; */
+"gEr-Wk-HET.title" = "Device Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hTI-iM-bbu"; */
+"hTI-iM-bbu.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "jPs-ut-7Uu"; */
+"jPs-ut-7Uu.title" = "Item";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "l92-Zb-eeo"; */
+"l92-Zb-eeo.text" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lqt-xP-Tts"; */
+"lqt-xP-Tts.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "m2H-Zb-62q"; */
+"m2H-Zb-62q.text" = "Title";
+
+/* Class = "UILabel"; text = "IP Address"; ObjectID = "mXO-J8-NOI"; */
+"mXO-J8-NOI.text" = "IP Address";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ntd-Nl-ILm"; */
+"ntd-Nl-ILm.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Temporary Storage"; ObjectID = "nz7-m5-omv"; */
+"nz7-m5-omv.normalTitle" = "Temporary Storage";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ogk-yS-a2l"; */
+"ogk-yS-a2l.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Remove Device"; ObjectID = "pFk-LR-atG"; */
+"pFk-LR-atG.normalTitle" = "Remove Device";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "rck-fd-YXh"; */
+"rck-fd-YXh.text" = "Detail";
+
+/* Class = "UILabel"; text = "Device Status"; ObjectID = "tAt-EH-32O"; */
+"tAt-EH-32O.text" = "Device Status";

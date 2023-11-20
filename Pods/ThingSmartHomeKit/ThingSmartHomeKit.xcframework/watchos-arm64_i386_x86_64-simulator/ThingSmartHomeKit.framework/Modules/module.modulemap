@@ -1,0 +1,6 @@
+framework module ThingSmartHomeKit {
+  umbrella header "ThingSmartHomeKit-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
