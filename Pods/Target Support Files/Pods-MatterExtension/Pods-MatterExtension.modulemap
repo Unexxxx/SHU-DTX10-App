@@ -1,0 +1,6 @@
+module Pods_MatterExtension {
+  umbrella header "Pods-MatterExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

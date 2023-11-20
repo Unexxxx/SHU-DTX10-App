@@ -1,0 +1,6 @@
+framework module ThingFoundationKit {
+  umbrella header "ThingFoundationKit-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

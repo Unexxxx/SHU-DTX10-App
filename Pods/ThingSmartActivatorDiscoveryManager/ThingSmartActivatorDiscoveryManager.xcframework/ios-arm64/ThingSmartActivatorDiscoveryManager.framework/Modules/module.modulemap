@@ -1,0 +1,6 @@
+framework module ThingSmartActivatorDiscoveryManager {
+  umbrella header "ThingSmartActivatorDiscoveryManager.h"
+
+  export *
+  module * { export * }
+}
