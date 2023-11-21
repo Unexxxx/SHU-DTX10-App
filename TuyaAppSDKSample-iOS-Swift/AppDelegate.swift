@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             if ThingSmartUser.sharedInstance().isLogin {
                 // User has already logged, launch the app with the main view controller.
-                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 window?.rootViewController = vc
                 window?.makeKeyAndVisible()

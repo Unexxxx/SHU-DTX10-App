@@ -44,7 +44,7 @@ class LoginTableViewController: UITableViewController {
                                                  email: account,
                                                  password: password) { [weak self] in
                 guard let self = self else { return }
-                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
 
@@ -56,7 +56,7 @@ class LoginTableViewController: UITableViewController {
         case .phone:
             ThingSmartUser.sharedInstance().login(byPhone: countryCode, phoneNumber: account, password: password) { [weak self] in
                 guard let self = self else { return }
-                let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
+                let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc
                 
