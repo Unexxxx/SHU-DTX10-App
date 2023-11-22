@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98F-gy-mwM">
-                                <rect key="frame" x="337" y="62" width="40" height="40"/>
+                                <rect key="frame" x="16" y="62" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="40v-fw-Itl"/>
                                     <constraint firstAttribute="height" constant="40" id="uS8-LJ-S9D"/>
@@ -35,13 +35,23 @@
                                     <action selector="settings:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3X1-Bh-2n7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7i-2O-lB2">
+                                <rect key="frame" x="282" y="64.666666666666671" width="111" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Device"/>
+                                <connections>
+                                    <action selector="addDevice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1VM-tq-VXp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="D2i-4U-opP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AbJ-kw-maQ"/>
                             <constraint firstItem="98F-gy-mwM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="3" id="IEg-cB-KHm"/>
-                            <constraint firstItem="98F-gy-mwM" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailingMargin" id="M4y-hL-GNt"/>
+                            <constraint firstItem="98F-gy-mwM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="M4y-hL-GNt"/>
+                            <constraint firstItem="b7i-2O-lB2" firstAttribute="centerY" secondItem="D2i-4U-opP" secondAttribute="centerY" id="NTC-3f-lMW"/>
+                            <constraint firstAttribute="trailing" secondItem="b7i-2O-lB2" secondAttribute="trailing" id="RXa-IY-F7Y"/>
                             <constraint firstItem="98F-gy-mwM" firstAttribute="centerY" secondItem="D2i-4U-opP" secondAttribute="centerY" id="gSE-yn-u0V"/>
                         </constraints>
                     </view>

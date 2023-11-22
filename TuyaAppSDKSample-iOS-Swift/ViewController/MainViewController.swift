@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "SHU DTX10 App"
         
         configureView()
     }

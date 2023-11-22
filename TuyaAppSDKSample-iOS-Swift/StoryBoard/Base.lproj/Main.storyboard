@@ -51,21 +51,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home SDK Ver: 4.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGF-Pc-rVR">
-                                <rect key="frame" x="149" y="846" width="116" height="16"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
-                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I9M-Sv-At2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bGF-Pc-rVR" firstAttribute="top" secondItem="d1U-b2-hBU" secondAttribute="bottom" constant="44" id="AYz-p6-0Qa"/>
                             <constraint firstItem="I9M-Sv-At2" firstAttribute="trailing" secondItem="d1U-b2-hBU" secondAttribute="trailing" constant="44" id="YO0-eF-l8E"/>
-                            <constraint firstItem="bGF-Pc-rVR" firstAttribute="bottom" secondItem="I9M-Sv-At2" secondAttribute="bottom" id="gLv-LE-N7e"/>
+                            <constraint firstItem="d1U-b2-hBU" firstAttribute="top" secondItem="I9M-Sv-At2" secondAttribute="top" constant="534" id="gWt-Qv-TJd"/>
                             <constraint firstItem="d1U-b2-hBU" firstAttribute="leading" secondItem="I9M-Sv-At2" secondAttribute="leading" constant="44" id="qs9-XA-Noh"/>
-                            <constraint firstItem="bGF-Pc-rVR" firstAttribute="centerX" secondItem="2rq-zy-7ke" secondAttribute="centerX" id="u2Q-Vt-ae1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SHU DTX10 App" id="CWv-aU-yDU"/>
@@ -121,9 +113,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
