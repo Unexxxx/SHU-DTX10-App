@@ -6,15 +6,28 @@
 
 import UIKit
 import ThingSmartBLEKit
+import ThingSmartFamilyBizKit
 
 class ShuDtxViewController: UIViewController {
 
     @IBOutlet var settings: UIButton!
     private var isSuccess = false
+    let homeManager = ThingSmartHomeManager()
+    
+    override func viewDidLoad() {
+        initiateCurrentHome()
+        ThingSmartFamilyBiz.sharedInstance().getFamilyList { _ in
+            ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: "")
+        } failure: { error in
+            
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         stopConfigBLE()
     }
     
@@ -27,6 +40,14 @@ class ShuDtxViewController: UIViewController {
         ThingSmartBLEManager.sharedInstance().stopListening(true)
     }
     
+    private func initiateCurrentHome() {
+        homeManager.getHomeList { (homeModels) in
+            Home.current = homeModels?.first
+        } failure: { (error) in
+            
+        }
+    }
+    
     @IBAction func addDevice(_ sender: Any) {
         ThingSmartBLEManager.sharedInstance().delegate = self
         // Start finding un-paired BLE devices.
@@ -37,13 +58,7 @@ class ShuDtxViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
             SVProgressHUD.dismiss()
             ThingSmartBLEManager.sharedInstance().stopListening(true)
-            
-            let alertController = UIAlertController(title: "No Devices Found", message: "Please try searching again", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                alertController.dismiss(animated: true, completion: nil)
-                }
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
+            AlertManager.showAlert(title: "No Devices Found", message: "Please try Searching again", viewController: self)
         }
     }
     

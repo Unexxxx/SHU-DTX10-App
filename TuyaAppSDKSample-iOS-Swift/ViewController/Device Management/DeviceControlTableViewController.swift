@@ -107,7 +107,7 @@ class DeviceControlTableViewController: UITableViewController {
                   let isOn = dps[dpID] as? Bool
             else { break }
             
-            cell.label.text = schema.name
+            cell.label.text = "Remote Measurement"/*schema.name*/
             cell.switchButton.isOn = isOn
             cell.isReadOnly = isReadOnly
             
@@ -153,7 +153,7 @@ class DeviceControlTableViewController: UITableViewController {
                   let range = schema.property.range as? [String]
             else { break }
             
-            cell.label.text = "Unit Conversion"
+            cell.label.text = "Unit of measure"
             cell.optionArray = range
             cell.currentOption = option
             cell.isReadOnly = isReadOnly
@@ -174,7 +174,7 @@ class DeviceControlTableViewController: UITableViewController {
             
             ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
-            cell.label.text = schema.name
+            cell.label.text = "Area Data"/*schema.name*/
             cell.textField.text = text
             cell.isReadOnly = isReadOnly
             

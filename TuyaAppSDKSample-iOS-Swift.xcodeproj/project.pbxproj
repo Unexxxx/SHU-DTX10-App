@@ -15,6 +15,7 @@
 		0FF096C42AB3F1EB003C6BDA /* Matter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF096C22AB3F1EB003C6BDA /* Matter.storyboard */; };
 		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 		2E2128C42B0D55C20061AA25 /* ShuDtxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */; };
+		2E4BE8362B0D9F6A00D17A5A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */; };
 		2EF9495D2B0B428A00E15AD7 /* ShuDtxMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF9495C2B0B428A00E15AD7 /* ShuDtxMain.storyboard */; };
 		42D0EFDD2ABC49580021AC7E /* DeviceListBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD82ABC49580021AC7E /* DeviceListBaseVC.swift */; };
 		42D0EFDE2ABC49580021AC7E /* DeviceDetailKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD92ABC49580021AC7E /* DeviceDetailKitVC.swift */; };
@@ -187,6 +188,7 @@
 		0FF096C32AB3F1EB003C6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Matter.storyboard; sourceTree = "<group>"; };
 		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuDtxViewController.swift; sourceTree = "<group>"; };
+		2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		2E7099752B0D5E4100ED82C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FunctionList.strings; sourceTree = "<group>"; };
 		2EA64A112B0AF05C005D8C7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		2EA64A132B0AF07A005D8C7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/DeviceList.strings; sourceTree = "<group>"; };
@@ -653,12 +655,13 @@
 				42D0EFD72ABC49580021AC7E /* DeviceDetailList */,
 				9813B6C92AA719A7001646C0 /* Device Network Configuration */,
 				AF3A259B25A835AE003EB9FF /* MainViewController.swift */,
+				2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */,
+				2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */,
 				AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */,
 				AF5E2F4B25A5D26E00DAF14E /* User Management */,
 				AF3A25BB25AD9AC3003EB9FF /* Home Management */,
 				AF21C20425B03FAC00D52FBA /* BE Device Network Configuration  */,
 				AF96112225B17F1E000971CC /* Device Management */,
-				2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -976,6 +979,7 @@
 				82B55B9E2AB3079100FBE30B /* BERoomListViewController.swift in Sources */,
 				82FBA97B2AB1886300822B41 /* BECurrentHomeViewController.swift in Sources */,
 				82B55BA42AB30CD600FBE30B /* BERoomDetailViewController.swift in Sources */,
+				2E4BE8362B0D9F6A00D17A5A /* AlertAction.swift in Sources */,
 				0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */,
 				98B4A1EB2AB4620B004D759E /* BEMatterTableViewController.swift in Sources */,
 				AF3A25C525AE930E003EB9FF /* SwitchHomeTableViewController.swift in Sources */,
