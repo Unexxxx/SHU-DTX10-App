@@ -88,12 +88,22 @@ class DeviceControlTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell(style: .default, reuseIdentifier: nil)
         guard let device = device else { return defaultCell }
-        
+
         let schema = targetSchemaModel != nil ? targetSchemaModel! : device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
         var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue)!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue) else {
+            print("Schemas dpId: \(String(describing: schema.dpId))")
+            print("Schemas code: \(String(describing: schema.code))")
+            print("Schemas name: \(String(describing: schema.name))")
+            print("Schemas mode: \(String(describing: schema.mode))")
+            print("Schemas iconname: \(String(describing: schema.iconname))")
+            print("Schemas property: \(String(describing: schema.property))")
+            print("Schemas extContent: \(String(describing: schema.extContent))")
+            
+                return defaultCell
+            }
         
         if let mode = schema.mode {
             isReadOnly = mode == "ro"
@@ -126,9 +136,11 @@ class DeviceControlTableViewController: UITableViewController {
                   let value = dps[dpID] as? Int
             else { break }
             
+            let metersValue = Double(value) / 1000.0
+            
             cell.label.text = schema.name
             cell.label.text = "Current Distance"
-            cell.detailLabel.text = String(value)
+            cell.detailLabel.text = String(format: "%.3f", metersValue)
             cell.slider.minimumValue = Float(schema.property.min)
             cell.slider.maximumValue = Float(schema.property.max)
             cell.slider.isContinuous = false

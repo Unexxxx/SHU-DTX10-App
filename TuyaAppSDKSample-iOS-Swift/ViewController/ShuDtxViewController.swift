@@ -7,15 +7,20 @@
 import UIKit
 import ThingSmartBLEKit
 import ThingSmartFamilyBizKit
+import ThingSmartDeviceKit
+import ThingSmartDeviceCoreKit
 
 class ShuDtxViewController: UIViewController {
 
     @IBOutlet var settings: UIButton!
     private var isSuccess = false
     let homeManager = ThingSmartHomeManager()
+    var deviceListContainerViewController: DeviceListContainerViewController?
     
     override func viewDidLoad() {
         initiateCurrentHome()
+        loadDeviceListContainer()
+        deviceListContainerViewController?.updateHomeDetail()
         ThingSmartFamilyBiz.sharedInstance().getFamilyList { _ in
             ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: "")
         } failure: { error in
@@ -45,6 +50,12 @@ class ShuDtxViewController: UIViewController {
             Home.current = homeModels?.first
         } failure: { (error) in
             
+        }
+    }
+    
+    private func loadDeviceListContainer() {
+        if let childViewController = children.first as? DeviceListContainerViewController {
+            deviceListContainerViewController = childViewController
         }
     }
     
