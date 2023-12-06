@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hn-N9-nbg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,37 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DTX10 App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-4U-opP">
-                                <rect key="frame" x="151" y="71.666666666666671" width="91.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" systemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98F-gy-mwM">
-                                <rect key="frame" x="16" y="62" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="40v-fw-Itl"/>
-                                    <constraint firstAttribute="height" constant="40" id="uS8-LJ-S9D"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="gear" catalog="system" title=" "/>
-                                <connections>
-                                    <action selector="settings:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3X1-Bh-2n7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7i-2O-lB2">
-                                <rect key="frame" x="282" y="63" width="111" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Add Device"/>
-                                <connections>
-                                    <action selector="addDevice:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1VM-tq-VXp"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-Wl-IBW">
                                 <rect key="frame" x="0.0" y="101" width="393" height="438"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-E8-1jg">
-                                        <rect key="frame" x="0.0" y="8" width="393" height="430"/>
+                                        <rect key="frame" x="0.0" y="6" width="393" height="430"/>
                                         <connections>
                                             <segue destination="zDF-ij-4om" kind="embed" id="Dpl-Pq-Zpg"/>
                                         </connections>
@@ -70,26 +44,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="D2i-4U-opP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AbJ-kw-maQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AIw-Wl-IBW" secondAttribute="bottom" constant="279" id="BEx-Ey-VcM"/>
-                            <constraint firstItem="98F-gy-mwM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="3" id="IEg-cB-KHm"/>
-                            <constraint firstItem="98F-gy-mwM" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="M4y-hL-GNt"/>
                             <constraint firstItem="AIw-Wl-IBW" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="101" id="MJU-YX-oVH"/>
-                            <constraint firstItem="b7i-2O-lB2" firstAttribute="centerY" secondItem="D2i-4U-opP" secondAttribute="centerY" id="NTC-3f-lMW"/>
-                            <constraint firstAttribute="trailing" secondItem="b7i-2O-lB2" secondAttribute="trailing" id="RXa-IY-F7Y"/>
                             <constraint firstItem="AIw-Wl-IBW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Y4s-0p-Xf7"/>
                             <constraint firstItem="AIw-Wl-IBW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="bxj-Dp-dKn"/>
-                            <constraint firstItem="98F-gy-mwM" firstAttribute="centerY" secondItem="D2i-4U-opP" secondAttribute="centerY" id="gSE-yn-u0V"/>
-                            <constraint firstItem="AIw-Wl-IBW" firstAttribute="top" secondItem="b7i-2O-lB2" secondAttribute="bottom" id="xtF-3C-Lub"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="settings" destination="98F-gy-mwM" id="b1z-Lo-1q3"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="JdY-JP-6Tp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.404580152671755" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="964.12213740458014" y="-2.1126760563380285"/>
         </scene>
         <!--Device List Container View Controller-->
         <scene sceneID="unl-qB-FFf">
@@ -111,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rz-ID-7c5">
-                                                    <rect key="frame" x="15" y="15" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="22.666666666666664" width="60" height="45.000000000000021"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="7pp-Ru-hfU"/>
                                                         <constraint firstAttribute="height" constant="60" id="yyP-8z-n6M"/>
@@ -201,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La4-lM-LGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="173"/>
+            <point key="canvasLocation" x="1860.3053435114502" y="-2.1126760563380285"/>
         </scene>
         <!--Device Control Table View Controller-->
         <scene sceneID="5UW-jm-upe">
@@ -210,6 +175,25 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Q9Q-vw-b9M">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rjY-tI-cK5">
+                            <rect key="frame" x="0.0" y="204.33333396911621" width="393" height="422"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Remove Device">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="16" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="removeDeviceTapped:" destination="KLv-2W-kzD" eventType="touchUpInside" id="lR1-zM-8rT"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="device-slider-cell" id="oFL-1j-cK1" customClass="SliderTableViewCell" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target">
                                 <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
@@ -248,7 +232,7 @@
                                                     </constraints>
                                                     <connections>
                                                         <action selector="sliderValueChanged:" destination="oFL-1j-cK1" eventType="valueChanged" id="VlX-JA-deT"/>
-                                                        <segue destination="lRV-l4-O1N" kind="show" id="CVl-3T-s0E"/>
+                                                        <segue destination="lRV-l4-O1N" kind="show" identifier="show-device-detail" id="CVl-3T-s0E"/>
                                                     </connections>
                                                 </slider>
                                             </subviews>
@@ -314,7 +298,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPd-dq-UNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2153" y="-110"/>
+            <point key="canvasLocation" x="3078.6259541984732" y="-111.26760563380282"/>
         </scene>
         <!--TuyaLink Device Control-->
         <scene sceneID="9Ep-MQ-hRe">
@@ -587,7 +571,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdT-b5-CAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152" y="638"/>
+            <point key="canvasLocation" x="3078.6259541984732" y="637.32394366197184"/>
         </scene>
         <!--Device Detail-->
         <scene sceneID="aNs-R6-amS">
@@ -716,7 +700,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44v-c6-YBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3199" y="223"/>
+            <point key="canvasLocation" x="4124.4274809160306" y="222.53521126760563"/>
         </scene>
         <!--Title-->
         <scene sceneID="nnQ-AI-zYa">
@@ -972,19 +956,33 @@
             </objects>
             <point key="canvasLocation" x="3462" y="1313"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4KT-iK-ocz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hn-N9-nbg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1mw-ay-FCK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XF6-t9-xPz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVZ-DT-PNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.404580152671755" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CVl-3T-s0E"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

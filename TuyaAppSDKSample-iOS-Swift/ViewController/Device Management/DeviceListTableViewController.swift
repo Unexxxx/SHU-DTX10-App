@@ -63,17 +63,6 @@
 //        let viewModel = viewModelList[indexPath.section]
 //        return Cardcell.cellHeight(viewModel: viewModel)
 //    }
-//
-////    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-////        let rtn = UIView()
-////        rtn.backgroundColor = UIColor.red
-////        return rtn
-////    }
-////
-////    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-////        return 50.0
-////    }
-////
 //    
 //    // MARK: - Private method
 //    private func updateHomeDetail() {
@@ -155,24 +144,24 @@
 //    }
 //}
 //
-////extension DeviceListTableViewController: ThingSmartHomeDelegate{
-////    func homeDidUpdateInfo(_ home: ThingSmartHome!) {
-////        tableView.reloadData()
-////    }
-////    
-////    func home(_ home: ThingSmartHome!, didAddDeivice device: ThingSmartDeviceModel!) {
-////        tableView.reloadData()
-////    }
-////    
-////    func home(_ home: ThingSmartHome!, didRemoveDeivice devId: String!) {
-////        tableView.reloadData()
-////    }
-////    
-////    func home(_ home: ThingSmartHome!, deviceInfoUpdate device: ThingSmartDeviceModel!) {
-////        tableView.reloadData()
-////    }
-////    
-////    func home(_ home: ThingSmartHome!, device: ThingSmartDeviceModel!, dpsUpdate dps: [AnyHashable : Any]!) {
-////        tableView.reloadData()
-////    }
-////}
+//extension DeviceListTableViewController: ThingSmartHomeDelegate{
+//    func homeDidUpdateInfo(_ home: ThingSmartHome!) {
+//        tableView.reloadData()
+//    }
+//    
+//    func home(_ home: ThingSmartHome!, didAddDeivice device: ThingSmartDeviceModel!) {
+//        tableView.reloadData()
+//    }
+//    
+//    func home(_ home: ThingSmartHome!, didRemoveDeivice devId: String!) {
+//        tableView.reloadData()
+//    }
+//    
+//    func home(_ home: ThingSmartHome!, deviceInfoUpdate device: ThingSmartDeviceModel!) {
+//        tableView.reloadData()
+//    }
+//    
+//    func home(_ home: ThingSmartHome!, device: ThingSmartDeviceModel!, dpsUpdate dps: [AnyHashable : Any]!) {
+//        tableView.reloadData()
+//    }
+//}

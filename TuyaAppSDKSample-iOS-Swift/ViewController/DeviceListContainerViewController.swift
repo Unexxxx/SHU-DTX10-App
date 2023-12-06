@@ -8,6 +8,7 @@ import UIKit
 import ThingSmartDeviceKit
 import ThingSmartDeviceCoreKit
 
+@available(iOS 13.0, *)
 class DeviceListContainerViewController: UITableViewController, CardCellDelegate {
     // MARK: - Property
     private var home: ThingSmartHome?
@@ -65,16 +66,6 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
         return Cardcell.cellHeight(viewModel: viewModel)
     }
 
-//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        let rtn = UIView()
-//        rtn.backgroundColor = UIColor.red
-//        return rtn
-//    }
-//
-//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 50.0
-//    }
-//
     
     // MARK: - Private method
     func updateHomeDetail() {
@@ -141,7 +132,7 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
     private func jumpDeviceDetail(viewModel: CardCellViewModel, smartDp: ThingSmartDp?) {
         guard let device = viewModel.device else { return }
         
-        let storyboard = UIStoryboard(name: "DeviceList", bundle: nil)
+        let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
         let isSupportThingModel = device.deviceModel.isSupportThingModelDevice()
         let identifier = isSupportThingModel ? "ThingLinkDeviceControlController" : "DeviceControlTableViewController"
         
@@ -156,6 +147,7 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
     }
 }
 
+@available(iOS 13.0, *)
 extension DeviceListContainerViewController: ThingSmartHomeDelegate{
     func homeDidUpdateInfo(_ home: ThingSmartHome!) {
         tableView.reloadData()

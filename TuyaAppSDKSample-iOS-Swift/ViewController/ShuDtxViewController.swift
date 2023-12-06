@@ -10,17 +10,23 @@ import ThingSmartFamilyBizKit
 import ThingSmartDeviceKit
 import ThingSmartDeviceCoreKit
 
+@available(iOS 13.0, *)
 class ShuDtxViewController: UIViewController {
 
-    @IBOutlet var settings: UIButton!
     private var isSuccess = false
     let homeManager = ThingSmartHomeManager()
-    var deviceListContainerViewController: DeviceListContainerViewController?
     
     override func viewDidLoad() {
+        navigationItem.title = "DTX10 App"
+        
+        let gearIcon = UIImage(systemName: "gear")
+        let gearButton = UIBarButtonItem(image: gearIcon, style: .plain, target: self, action: #selector(settingsButtonTapped))
+        navigationItem.leftBarButtonItem = gearButton
+        
+        let addDeviceButton = UIBarButtonItem(title: "Add Device", style: .plain, target: self, action: #selector(addDeviceButtonTapped))
+        navigationItem.rightBarButtonItem = addDeviceButton
+        
         initiateCurrentHome()
-        loadDeviceListContainer()
-        deviceListContainerViewController?.updateHomeDetail()
         ThingSmartFamilyBiz.sharedInstance().getFamilyList { _ in
             ThingSmartFamilyBiz.sharedInstance().launchCurrentFamily(withAppGroupName: "")
         } failure: { error in
@@ -53,13 +59,13 @@ class ShuDtxViewController: UIViewController {
         }
     }
     
-    private func loadDeviceListContainer() {
-        if let childViewController = children.first as? DeviceListContainerViewController {
-            deviceListContainerViewController = childViewController
-        }
+    @objc func settingsButtonTapped() {
+        let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        self.window?.rootViewController = vc
     }
     
-    @IBAction func addDevice(_ sender: Any) {
+    @objc func addDeviceButtonTapped() {
         ThingSmartBLEManager.sharedInstance().delegate = self
         // Start finding un-paired BLE devices.
         ThingSmartBLEManager.sharedInstance().startListening(true)
@@ -72,14 +78,9 @@ class ShuDtxViewController: UIViewController {
             AlertManager.showAlert(title: "No Devices Found", message: "Please try Searching again", viewController: self)
         }
     }
-    
-    @IBAction func settings(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "ThingSmartMain", bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()
-        self.window?.rootViewController = vc
-    }
 }
 
+@available(iOS 13.0, *)
 extension ShuDtxViewController: ThingSmartBLEManagerDelegate {
     // When the BLE detector finds one un-paired BLE device, this delegate method will be called.
     func didDiscoveryDevice(withDeviceInfo deviceInfo: ThingBLEAdvModel) {

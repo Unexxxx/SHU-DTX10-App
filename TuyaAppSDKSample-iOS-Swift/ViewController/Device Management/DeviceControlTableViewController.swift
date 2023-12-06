@@ -8,6 +8,7 @@ import UIKit
 import NotificationCenter
 import ThingSmartDeviceKit
 
+@available(iOS 13.0, *)
 class DeviceControlTableViewController: UITableViewController {
 
     // MARK: - Property
@@ -18,7 +19,6 @@ class DeviceControlTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = device?.deviceModel.name
         device?.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(deviceHasRemoved(_:)), name: .SVProgressHUDDidDisappear, object: nil)
     }
@@ -64,6 +64,28 @@ class DeviceControlTableViewController: UITableViewController {
             SVProgressHUD.showError(withStatus: errorMessage)
         })
     }
+    @IBAction func removeDeviceTapped(_ sender: UIButton) {
+        let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
+            guard let self = self else { return }
+            self.device?.remove({
+                guard let vc = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] else { return }
+                self.navigationController?.popToViewController(vc, animated: true)
+            }, failure: { (error) in
+                let errorMessage = error?.localizedDescription ?? ""
+                Alert.showBasicAlert(on: self, with: NSLocalizedString("Failed to Remove", comment: "Failed to remove the device"), message: errorMessage)
+            })
+        }
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
+        
+        let alert = UIAlertController(title: NSLocalizedString("Remove the Device?", comment: ""), message: NSLocalizedString("If you choose to remove the device, you'll no long hold control over this device.", comment: ""), preferredStyle: .actionSheet)
+        alert.addAction(removeAction)
+        alert.addAction(cancelAction)
+        
+        alert.popoverPresentationController?.sourceView = sender
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
     @objc private func deviceHasRemoved(_ notification: Notification) {
         guard let key = notification.userInfo?[SVProgressHUDStatusUserInfoKey] as? String,
@@ -94,16 +116,8 @@ class DeviceControlTableViewController: UITableViewController {
         var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue) else {
-            print("Schemas dpId: \(String(describing: schema.dpId))")
-            print("Schemas code: \(String(describing: schema.code))")
-            print("Schemas name: \(String(describing: schema.name))")
-            print("Schemas mode: \(String(describing: schema.mode))")
-            print("Schemas iconname: \(String(describing: schema.iconname))")
-            print("Schemas property: \(String(describing: schema.property))")
-            print("Schemas extContent: \(String(describing: schema.extContent))")
-            
-                return defaultCell
-            }
+            return defaultCell
+        }
         
         if let mode = schema.mode {
             isReadOnly = mode == "ro"
@@ -128,7 +142,7 @@ class DeviceControlTableViewController: UITableViewController {
                 
                 self.publishMessage(with: [dpID : switchButton.isOn])
             }
-
+            
         case .sliderCell:
             guard let cell = cell as? SliderTableViewCell,
                   let dps = dps,
@@ -203,12 +217,12 @@ class DeviceControlTableViewController: UITableViewController {
             else { break }
             
             var text = ""
-
+            
             ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
             cell.label.text = schema.name
             cell.detailLabel.text = text
-        
+            
         case .textviewCell:
             guard let cell = cell as? TextViewTableViewCell,
                   let dps = dps,
@@ -223,12 +237,13 @@ class DeviceControlTableViewController: UITableViewController {
                 cell.textview.text = s
             }
         }
-
+        
         return cell
     }
-
+    
 }
 
+@available(iOS 13.0, *)
 extension DeviceControlTableViewController: ThingSmartDeviceDelegate {
     func deviceInfoUpdate(_ device: ThingSmartDevice) {
         detectDeviceAvailability()

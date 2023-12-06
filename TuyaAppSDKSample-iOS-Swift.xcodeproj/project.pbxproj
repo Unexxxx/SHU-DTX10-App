@@ -660,11 +660,11 @@
 				2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */,
 				2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */,
 				AF5E2F4725A5A51B00DAF14E /* TuyaSmartMainTableViewController.swift */,
+				2EB622862B1AC7E6006E49C3 /* DeviceListContainerViewController.swift */,
 				AF5E2F4B25A5D26E00DAF14E /* User Management */,
 				AF3A25BB25AD9AC3003EB9FF /* Home Management */,
 				AF21C20425B03FAC00D52FBA /* BE Device Network Configuration  */,
 				AF96112225B17F1E000971CC /* Device Management */,
-				2EB622862B1AC7E6006E49C3 /* DeviceListContainerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

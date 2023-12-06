@@ -9,6 +9,7 @@ import UIKit
 class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet var backButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -44,6 +45,13 @@ class ThingSmartMainTableViewController: UITableViewController {
         
         self.present(alertViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func backTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        self.window?.rootViewController = vc
+    }
+    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
