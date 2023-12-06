@@ -1,0 +1,6 @@
+framework module BlocksKit {
+  umbrella header "ThingBlockKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

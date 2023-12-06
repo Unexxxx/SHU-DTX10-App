@@ -1,0 +1,16 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ThingSmartFamilyBizKit
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+EXCLUDED_ARCHS[sdk=watchsimulator*] = x86_64 arm64
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ThingAnnotationFoundation" "${PODS_ROOT}/ThingFoundationKit" "${PODS_ROOT}/ThingKVStorageLibrary" "${PODS_ROOT}/ThingMbedtls/Build" "${PODS_ROOT}/ThingModuleManager" "${PODS_ROOT}/ThingOpenSSLSDK/Build" "${PODS_ROOT}/ThingSmartBaseKit/Build" "${PODS_ROOT}/ThingSmartDeviceCoreKit/Build" "${PODS_ROOT}/ThingSmartDeviceKit/Build" "${PODS_ROOT}/ThingSmartFamilyBizKit" "${PODS_ROOT}/ThingSmartMQTTChannelKit/Build" "${PODS_ROOT}/ThingSmartNetworkKit/Build" "${PODS_ROOT}/ThingSmartShareKit/Build" "${PODS_ROOT}/ThingSmartSocketChannelKit/Build" "${PODS_ROOT}/ThingSmartUtil/Build" "${PODS_ROOT}/ThingStorageGroupInterface" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingAnnotationFoundation" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingFoundationKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingKVStorageLibrary" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMbedtls" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingModuleManager" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingOpenSSLSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartBaseKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceCoreKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartFamilyBizKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMQTTChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartNetworkKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartShareKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartSocketChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartUtil" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingStorageGroupInterface"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_ROOT}/Headers/Public/YYModel/YYModel.modulemap"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/ThingSmartFamilyBizKit
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

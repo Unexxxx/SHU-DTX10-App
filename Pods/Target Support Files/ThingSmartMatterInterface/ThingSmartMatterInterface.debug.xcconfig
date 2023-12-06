@@ -1,0 +1,14 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ThingSmartMatterInterface
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ThingAnnotationFoundation" "${PODS_ROOT}/ThingBlockKit" "${PODS_ROOT}/ThingBluetooth/Build" "${PODS_ROOT}/ThingFoundationKit" "${PODS_ROOT}/ThingKVStorageLibrary" "${PODS_ROOT}/ThingMbedtls/Build" "${PODS_ROOT}/ThingModuleManager" "${PODS_ROOT}/ThingOpenSSLSDK/Build" "${PODS_ROOT}/ThingSmartBaseKit/Build" "${PODS_ROOT}/ThingSmartDeviceCoreKit/Build" "${PODS_ROOT}/ThingSmartMQTTChannelKit/Build" "${PODS_ROOT}/ThingSmartMatterInterface" "${PODS_ROOT}/ThingSmartMatterInterfaceAPI" "${PODS_ROOT}/ThingSmartMatterKit/Build" "${PODS_ROOT}/ThingSmartMatterKit/Build/VendorsFramework" "${PODS_ROOT}/ThingSmartNetworkKit/Build" "${PODS_ROOT}/ThingSmartSocketChannelKit/Build" "${PODS_ROOT}/ThingSmartUtil/Build" "${PODS_ROOT}/ThingStorageGroupInterface" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingAnnotationFoundation" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingBlockKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingBluetooth" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingFoundationKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingKVStorageLibrary" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMbedtls" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingModuleManager" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingOpenSSLSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartBaseKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceCoreKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMQTTChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMatterInterface" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMatterInterfaceAPI" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMatterKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartNetworkKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartSocketChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartUtil" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingStorageGroupInterface"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_ROOT}/Headers/Public/YYModel/YYModel.modulemap"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/ThingSmartMatterInterface
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

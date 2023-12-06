@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Device Network List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <tableViewController id="Y6W-OH-hqX" customClass="DeviceNetworkListViewController" customModule="TuyaAppSDKSample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xQj-tP-JND">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection headerTitle="Device Network Configuration By Bussiness Extension SDK " id="MiF-sU-GAa" userLabel="Device Network Configuration by Bussiness Extension SDK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="wxV-mz-qWi" style="IBUITableViewCellStyleDefault" id="cBn-3b-UXb">
+                                        <rect key="frame" x="20" y="73.333335876464844" width="353" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cBn-3b-UXb" id="V5h-78-LKk">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Bluetooth Low Energy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wxV-mz-qWi">
+                                                    <rect key="frame" x="20" y="0.0" width="294.66666666666669" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="h5Y-d3-KNB" kind="show" id="ONZ-KJ-TO9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="NDb-g2-DaJ"/>
+                            <outlet property="delegate" destination="Y6W-OH-hqX" id="SST-3b-agr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+        <!--EZMode-->
+        <scene sceneID="WdG-41-KNF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EZMode" id="CjP-SM-T0O" userLabel="EZMode" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xW0-fU-LTO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtP-aw-0z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="-86"/>
+        </scene>
+        <!--APMode-->
+        <scene sceneID="hiY-Uy-DeI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="APMode" id="sU6-zK-Svx" userLabel="APMode" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="P9j-D8-35H"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCG-Wd-kLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-35"/>
+        </scene>
+        <!--BLE-->
+        <scene sceneID="aER-X5-65r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BLE" id="h5Y-d3-KNB" userLabel="BLE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2P6-Ue-NWF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvk-Aa-I3r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="3"/>
+        </scene>
+        <!--DualMode-->
+        <scene sceneID="w8N-gi-h1G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DualMode" id="tJs-iA-5dC" userLabel="DualMode" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vnr-G4-z7O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="839-4m-cLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="39"/>
+        </scene>
+        <!--ZigbeeGateway-->
+        <scene sceneID="2cc-dW-vYX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ZigbeeGateway" id="OOr-T2-BM2" userLabel="ZigbeeGateway" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="s7L-0g-oX4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebZ-aG-go1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="78"/>
+        </scene>
+        <!--ZigbeeSubdevice-->
+        <scene sceneID="o3m-r7-Iy1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ZigbeeSubdevice" id="Zyy-My-MJ9" userLabel="ZigbeeSubdevice" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gs0-PW-wYq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0he-p9-8RW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421" y="114"/>
+        </scene>
+        <!--TuyaLinkBind-->
+        <scene sceneID="ork-g0-L7H">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TuyaLinkBind" id="THN-yS-PxI" userLabel="TuyaLinkBind" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oAr-Ai-Lt3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qJ7-Vv-47z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="158"/>
+        </scene>
+        <!--Matter-->
+        <scene sceneID="SCZ-in-Kch">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Matter" id="8Ik-mp-cgi" userLabel="Matter" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GJ7-oe-4Sd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiO-Cm-ahQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="224"/>
+        </scene>
+    </scenes>
+</document>
