@@ -2,8 +2,6 @@
 
 This sample demonstrates the use of Tuya iOS Smart Life App SDK to build an IoT app from scratch.Tuya iOS Smart Life App SDK is divided into several function groups to give developers a clear insight into the implementation of different features, including the user registration process, home management for different users, device network configuration, and controls. For device network configuration, the EZ mode and AP mode are implemented. This allows developers to pair devices over Wi-Fi and control the devices over LAN and MQTT. For device control, a common panel is used to send and receive any types of data points.
 
-<img src="https://github.com/tuya/tuya-home-ios-sdk-sample-swift/raw/main/snapshot.png" alt="Tuya Smart app" width="300"/>
-
 ## Self-developed Smart Life App Service
 Self-Developed Smart Life App is one of Tuya’s IoT app development solutions. This solution provides the services that enable connections between the app and the cloud. It also supports a full range of services and capabilities that customers can use to independently develop mobile apps. The Smart Life App SDK used in this sample is included in the Self-developed Smart Life App Service.
 
