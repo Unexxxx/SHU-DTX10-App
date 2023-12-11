@@ -97,7 +97,7 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
         }
     }
     
-    private func jumpNormalDeviceControl(_ vc: DeviceControlTableViewController, device: ThingSmartDevice) {
+    private func jumpNormalDeviceControl(_ vc: DeviceControlViewController, device: ThingSmartDevice) {
         vc.device = device
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -134,16 +134,18 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
         
         let storyboard = UIStoryboard(name: "ShuDtxMain", bundle: nil)
         let isSupportThingModel = device.deviceModel.isSupportThingModelDevice()
-        let identifier = isSupportThingModel ? "ThingLinkDeviceControlController" : "DeviceControlTableViewController"
+        let identifier = isSupportThingModel ? "ThingLinkDeviceControlController" : "DeviceControlViewController"
         
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         if isSupportThingModel {
-            jumpThingLinkDeviceControl(vc as! ThingLinkDeviceControlController, device: device)
-        } else {
-            let deviceControlTableViewController = vc as! DeviceControlTableViewController
-            deviceControlTableViewController.targetSchemaModel = smartDp?.schemaModel
-            jumpNormalDeviceControl(deviceControlTableViewController, device: device)
-        }
+                let thingLinkVC = vc as! ThingLinkDeviceControlController
+                jumpThingLinkDeviceControl(thingLinkVC, device: device)
+            } else {
+                if let deviceControlVC = vc as? DeviceControlViewController {
+                    deviceControlVC.targetSchemaModel = smartDp?.schemaModel
+                    jumpNormalDeviceControl(deviceControlVC, device: device)
+                }
+            }
     }
 }
 
