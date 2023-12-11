@@ -8,7 +8,6 @@ import UIKit
 import NotificationCenter
 import ThingSmartDeviceKit
 
-@available(iOS 13.0, *)
 class DeviceControlTableViewController: UITableViewController {
 
     // MARK: - Property
@@ -36,12 +35,6 @@ class DeviceControlTableViewController: UITableViewController {
         NotificationCenter.default.removeObserver(self, name: .SVProgressHUDDidDisappear, object: nil)
     }
     
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "show-device-detail" else { return }
-        let vc = segue.destination as! DeviceDetailTableViewController
-        vc.device = device
-    }
     
     // MARK: -  Private Method
     private func detectDeviceAvailability() {
@@ -64,6 +57,7 @@ class DeviceControlTableViewController: UITableViewController {
             SVProgressHUD.showError(withStatus: errorMessage)
         })
     }
+    
     @IBAction func removeDeviceTapped(_ sender: UIButton) {
         let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
@@ -110,14 +104,12 @@ class DeviceControlTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell(style: .default, reuseIdentifier: nil)
         guard let device = device else { return defaultCell }
-
+        
         let schema = targetSchemaModel != nil ? targetSchemaModel! : device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
         var isReadOnly = false
         let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue) else {
-            return defaultCell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.rawValue)!
         
         if let mode = schema.mode {
             isReadOnly = mode == "ro"
@@ -131,7 +123,7 @@ class DeviceControlTableViewController: UITableViewController {
                   let isOn = dps[dpID] as? Bool
             else { break }
             
-            cell.label.text = "Remote Measurement"/*schema.name*/
+            cell.label.text = schema.name
             cell.switchButton.isOn = isOn
             cell.isReadOnly = isReadOnly
             
@@ -142,7 +134,7 @@ class DeviceControlTableViewController: UITableViewController {
                 
                 self.publishMessage(with: [dpID : switchButton.isOn])
             }
-            
+
         case .sliderCell:
             guard let cell = cell as? SliderTableViewCell,
                   let dps = dps,
@@ -150,11 +142,9 @@ class DeviceControlTableViewController: UITableViewController {
                   let value = dps[dpID] as? Int
             else { break }
             
-            let metersValue = Double(value) / 1000.0
-            
             cell.label.text = schema.name
             cell.label.text = "Current Distance"
-            cell.detailLabel.text = String(format: "%.3f", metersValue)
+            cell.detailLabel.text = String(value)
             cell.slider.minimumValue = Float(schema.property.min)
             cell.slider.maximumValue = Float(schema.property.max)
             cell.slider.isContinuous = false
@@ -179,7 +169,7 @@ class DeviceControlTableViewController: UITableViewController {
                   let range = schema.property.range as? [String]
             else { break }
             
-            cell.label.text = "Unit of measure"
+            cell.label.text = "Unit Conversion"
             cell.optionArray = range
             cell.currentOption = option
             cell.isReadOnly = isReadOnly
@@ -200,7 +190,7 @@ class DeviceControlTableViewController: UITableViewController {
             
             ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
-            cell.label.text = "Area Data"/*schema.name*/
+            cell.label.text = schema.name
             cell.textField.text = text
             cell.isReadOnly = isReadOnly
             
@@ -217,12 +207,12 @@ class DeviceControlTableViewController: UITableViewController {
             else { break }
             
             var text = ""
-            
+
             ((value as? Int) != nil) ? (text = String(value as! Int)) : (text = value as? String ?? "")
             
             cell.label.text = schema.name
             cell.detailLabel.text = text
-            
+        
         case .textviewCell:
             guard let cell = cell as? TextViewTableViewCell,
                   let dps = dps,
@@ -237,13 +227,12 @@ class DeviceControlTableViewController: UITableViewController {
                 cell.textview.text = s
             }
         }
-        
+
         return cell
     }
-    
+
 }
 
-@available(iOS 13.0, *)
 extension DeviceControlTableViewController: ThingSmartDeviceDelegate {
     func deviceInfoUpdate(_ device: ThingSmartDevice) {
         detectDeviceAvailability()

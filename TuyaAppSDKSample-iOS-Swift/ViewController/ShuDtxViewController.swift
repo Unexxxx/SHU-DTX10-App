@@ -1,8 +1,5 @@
 //
-//  ShuDtxViewController.swift
-//  TuyaAppSDKSample-iOS-Swift
-//
-//  Copyright (c) 2014-2023 Tuya Inc. (https://developer.tuya.com/)
+
 
 import UIKit
 import ThingSmartBLEKit
@@ -71,11 +68,9 @@ class ShuDtxViewController: UIViewController {
         ThingSmartBLEManager.sharedInstance().startListening(true)
         SVProgressHUD.show(withStatus: NSLocalizedString("Searching", comment: ""))
         
-        // Set a timer for 1 minute
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0) {
+        // Set a timer for 20secs
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) {
             SVProgressHUD.dismiss()
-            ThingSmartBLEManager.sharedInstance().stopListening(true)
-            AlertManager.showAlert(title: "No Devices Found", message: "Please try Searching again", viewController: self)
         }
     }
 }
