@@ -18,7 +18,22 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var viewDistance: UIView!
     @IBOutlet var distanceMeter: UITextField!
     @IBOutlet var deviceOffline: UILabel!
-    var metersValue = 0.0
+    var metersValue = 0.0 {
+        didSet {
+            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
+                     showAlert(message: "URL Scheme not set.")
+                     return
+                  }
+                  
+                  let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
+                  
+                  if let url = URL(string: updatedURLScheme) {
+                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                  } else {
+                     showAlert(message: "Something's wrong with the URL Scheme.")
+                  }
+        }
+    }
     
     
     // MARK: - Lifecycle
@@ -47,7 +62,6 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         distanceMeter.isEnabled = true
         distanceMeter.font = UIFont.systemFont(ofSize: 50)
         distanceMeter.adjustsFontSizeToFitWidth = false
-//        distanceMeter.text = updateDistanceMeter(with: metersValue)
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -138,21 +152,23 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func sendButton(_ sender: Any) {
-        // Retrieve the URL scheme from UserDefaults
-            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
-                // Handle the case where the URL scheme is not available
-                showAlert(message: "URL Scheme not set. Please set a URL Scheme in the settings.")
-                return
-            }
-        
-        // Create a URL using the scheme
-        if let url = URL(string: "\(savedURLScheme)") {
-            // Open the app corresponding to the URL scheme
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            // Handle the case where the app cannot be opened
-            showAlert(message: "Something's wrong with the URL Scheme.")
-        }
+//        // Retrieve the URL scheme from UserDefaults
+//            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
+//                // Handle the case where the URL scheme is not available
+//                showAlert(message: "URL Scheme not set. Please set a URL Scheme in the settings.")
+//                return
+//            }
+//        
+//        let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
+//        
+//        // Create a URL using the scheme
+//        if let url = URL(string: "\(updatedURLScheme)") {
+//            // Open the app corresponding to the URL scheme
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        } else {
+//            // Handle the case where the app cannot be opened
+//            showAlert(message: "Something's wrong with the URL Scheme.")
+//        }
     }
     
     func showAlert(message: String) {
