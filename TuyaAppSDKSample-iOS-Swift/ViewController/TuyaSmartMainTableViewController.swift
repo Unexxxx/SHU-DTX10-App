@@ -6,6 +6,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ThingSmartMainTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var logoutButton: UIButton!
@@ -26,6 +27,10 @@ class ThingSmartMainTableViewController: UITableViewController {
         let logoutAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "Confirm logout."), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
             ThingSmartUser.sharedInstance().loginOut {
+                // Clear UserDefaults
+                UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+                UserDefaults.standard.synchronize()
+                
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()
                 self.window?.rootViewController = vc

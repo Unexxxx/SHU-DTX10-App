@@ -7,6 +7,7 @@
 import UIKit
 import ThingSmartBaseKit
 
+@available(iOS 13.0, *)
 class LoginTableViewController: UITableViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var countryCodeTextField: UITextField!
@@ -33,6 +34,7 @@ class LoginTableViewController: UITableViewController {
     }
     
     // MARK: - Private Method
+
     private func login(by type: AccountType) {
         let countryCode = countryCodeTextField.text ?? ""
         let account = accountTextField.text ?? ""
