@@ -194,6 +194,7 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QRq-HQ-7AR" customClass="Done">
                                         <rect key="frame" x="16" y="68.666666666666686" width="32" height="34"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" textContentType="tel"/>
                                     </textField>
@@ -218,7 +219,7 @@
                                     <constraint firstItem="QRq-HQ-7AR" firstAttribute="leading" secondItem="REL-4Q-jsf" secondAttribute="leading" constant="16" id="yHA-3h-FES"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-Za-CWx">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-Za-CWx">
                                 <rect key="frame" x="79" y="587" width="235" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="235" id="Bbm-jq-zd4"/>

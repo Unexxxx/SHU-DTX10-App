@@ -8,6 +8,7 @@ import UIKit
 import CoreLocation
 import ThingSmartBaseKit
 
+@available(iOS 13.0, *)
 class UserInformationTableViewController: UITableViewController {
     // MARK: IBOutlet
     @IBOutlet weak var userNameLabel: UILabel!
@@ -77,6 +78,7 @@ class UserInformationTableViewController: UITableViewController {
 }
 
 // MARK: - CLLocationManagerDelegate
+@available(iOS 13.0, *)
 extension UserInformationTableViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = manager.location?.coordinate else { return }

@@ -18,7 +18,22 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var viewDistance: UIView!
     @IBOutlet var distanceMeter: UITextField!
     @IBOutlet var deviceOffline: UILabel!
-    var metersValue = 0.0
+    var metersValue = 0.0 {
+        didSet {
+            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
+                     showAlert(message: "URL Scheme not set.")
+                     return
+                  }
+                  
+                  let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
+                  
+                  if let url = URL(string: updatedURLScheme) {
+                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                  } else {
+                     showAlert(message: "Something's wrong with the URL Scheme.")
+                  }
+        }
+    }
     
     
     // MARK: - Lifecycle
@@ -32,6 +47,11 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         device?.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(deviceHasRemoved(_:)), name: .SVProgressHUDDidDisappear, object: nil)
         
+        
+        let gearIcon = UIImage(systemName: "gear")
+        let gearButton = UIBarButtonItem(image: gearIcon, style: .plain, target: self, action: #selector(urlSchemeTapped))
+        navigationItem.rightBarButtonItem = gearButton
+        
         viewDistance.layer.cornerRadius = 15
         viewDistance.layer.masksToBounds = true
         viewDistance.alpha = 1
@@ -42,7 +62,6 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         distanceMeter.isEnabled = true
         distanceMeter.font = UIFont.systemFont(ofSize: 50)
         distanceMeter.adjustsFontSizeToFitWidth = false
-//        distanceMeter.text = updateDistanceMeter(with: metersValue)
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -109,6 +128,10 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
             self.device?.remove({
+                // Clear UserDefaults
+                UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+                UserDefaults.standard.synchronize()
+                
                 guard let vc = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] else { return }
                 self.navigationController?.popToViewController(vc, animated: true)
             }, failure: { (error) in
@@ -129,6 +152,61 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func sendButton(_ sender: Any) {
+//        // Retrieve the URL scheme from UserDefaults
+//            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
+//                // Handle the case where the URL scheme is not available
+//                showAlert(message: "URL Scheme not set. Please set a URL Scheme in the settings.")
+//                return
+//            }
+//        
+//        let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
+//        
+//        // Create a URL using the scheme
+//        if let url = URL(string: "\(updatedURLScheme)") {
+//            // Open the app corresponding to the URL scheme
+//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//        } else {
+//            // Handle the case where the app cannot be opened
+//            showAlert(message: "Something's wrong with the URL Scheme.")
+//        }
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    
+    @objc func urlSchemeTapped() {
+        let alertController = UIAlertController(title: "Edit URL Scheme", message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter URL Scheme"
+            
+            UserDefaults.standard.synchronize()
+            if let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") {
+                textField.text = savedURLScheme
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            // Handle the Save button action here
+            if let textField = alertController.textFields?.first, let urlScheme = textField.text {
+                // Use the entered URL Scheme as needed
+                print("Entered URL Scheme: \(urlScheme)")
+                
+                UserDefaults.standard.set(urlScheme, forKey: "urlScheme")
+            }
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     
