@@ -2,8 +2,9 @@ source 'https://github.com/CocoaPods/Specs'
 source 'https://github.com/tuya/TuyaPublicSpecs.git'
 source 'https://github.com/tuya/tuya-pod-specs.git'
 
+platform :ios, '15.0'
 
-target 'TuyaAppSDKSample-iOS-Swift' do
+target 'SHU DTX10' do
   use_modular_headers!
 
   pod 'SVProgressHUD'
@@ -29,5 +30,15 @@ target 'MatterExtension' do
 end
 
 post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == 'SHU DTX10'
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+      end
+    end
+  end
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
   `cd TuyaAppSDKSample-iOS-Swift; [[ -f AppKey.swift ]] || cp AppKey.swift.default AppKey.swift;`
 end

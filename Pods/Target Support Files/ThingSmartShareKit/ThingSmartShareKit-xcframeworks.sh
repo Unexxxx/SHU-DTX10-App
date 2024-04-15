@@ -17,13 +17,13 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
+  "ThingSmartShareKit.xcframework/ios-arm64")
+    echo ""
+    ;;
   "ThingSmartShareKit.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   "ThingSmartShareKit.xcframework/watchos-arm64_arm64_32_armv7k")
-    echo ""
-    ;;
-  "ThingSmartShareKit.xcframework/ios-arm64")
     echo ""
     ;;
   "ThingSmartShareKit.xcframework/watchos-arm64_i386_x86_64-simulator")
@@ -35,14 +35,14 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
+  "ThingSmartShareKit.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
   "ThingSmartShareKit.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   "ThingSmartShareKit.xcframework/watchos-arm64_arm64_32_armv7k")
     echo "arm64 arm64_32 armv7k"
-    ;;
-  "ThingSmartShareKit.xcframework/ios-arm64")
-    echo "arm64"
     ;;
   "ThingSmartShareKit.xcframework/watchos-arm64_i386_x86_64-simulator")
     echo "arm64 i386 x86_64"
@@ -129,5 +129,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/ThingSmartShareKit/Build/ThingSmartShareKit.xcframework" "ThingSmartShareKit" "framework" "ios-arm64_x86_64-simulator" "ios-arm64"
+install_xcframework "${PODS_ROOT}/ThingSmartShareKit/Build/ThingSmartShareKit.xcframework" "ThingSmartShareKit" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 

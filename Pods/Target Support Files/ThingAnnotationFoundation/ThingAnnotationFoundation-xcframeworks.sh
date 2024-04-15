@@ -17,16 +17,16 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "ThingAnnotationFoundation.xcframework/watchos-arm64_arm64_32_armv7k")
-    echo ""
-    ;;
-  "ThingAnnotationFoundation.xcframework/watchos-i386-simulator")
-    echo "simulator"
-    ;;
   "ThingAnnotationFoundation.xcframework/ios-arm64")
     echo ""
     ;;
   "ThingAnnotationFoundation.xcframework/ios-x86_64-simulator")
+    echo "simulator"
+    ;;
+  "ThingAnnotationFoundation.xcframework/watchos-arm64_arm64_32_armv7k")
+    echo ""
+    ;;
+  "ThingAnnotationFoundation.xcframework/watchos-i386-simulator")
     echo "simulator"
     ;;
   esac
@@ -35,17 +35,17 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
-  "ThingAnnotationFoundation.xcframework/watchos-arm64_arm64_32_armv7k")
-    echo "arm64 arm64_32 armv7k"
-    ;;
-  "ThingAnnotationFoundation.xcframework/watchos-i386-simulator")
-    echo "i386"
-    ;;
   "ThingAnnotationFoundation.xcframework/ios-arm64")
     echo "arm64"
     ;;
   "ThingAnnotationFoundation.xcframework/ios-x86_64-simulator")
     echo "x86_64"
+    ;;
+  "ThingAnnotationFoundation.xcframework/watchos-arm64_arm64_32_armv7k")
+    echo "arm64 arm64_32 armv7k"
+    ;;
+  "ThingAnnotationFoundation.xcframework/watchos-i386-simulator")
+    echo "i386"
     ;;
   esac
 }

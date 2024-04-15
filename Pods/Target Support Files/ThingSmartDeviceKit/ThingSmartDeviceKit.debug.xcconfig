@@ -1,12 +1,13 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/ThingSmartDeviceKit
 DEFINES_MODULE = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ThingMbedtls/Build" "${PODS_ROOT}/ThingOpenSSLSDK/Build" "${PODS_ROOT}/ThingSmartBaseKit/Build" "${PODS_ROOT}/ThingSmartDeviceCoreKit/Build" "${PODS_ROOT}/ThingSmartDeviceKit/Build" "${PODS_ROOT}/ThingSmartMQTTChannelKit/Build" "${PODS_ROOT}/ThingSmartNetworkKit/Build" "${PODS_ROOT}/ThingSmartShareKit/Build" "${PODS_ROOT}/ThingSmartSocketChannelKit/Build" "${PODS_ROOT}/ThingSmartUtil/Build" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMbedtls" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingOpenSSLSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartBaseKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceCoreKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMQTTChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartNetworkKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartShareKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartSocketChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartUtil"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ThingFoundationKit" "${PODS_ROOT}/ThingMachRegister" "${PODS_ROOT}/ThingMbedtls/Build" "${PODS_ROOT}/ThingOpenSSLSDK/Build" "${PODS_ROOT}/ThingSmartBaseKit/Build" "${PODS_ROOT}/ThingSmartDeviceCoreKit/Build" "${PODS_ROOT}/ThingSmartDeviceKit/Build" "${PODS_ROOT}/ThingSmartMQTTChannelKit/Build" "${PODS_ROOT}/ThingSmartNetworkKit/Build" "${PODS_ROOT}/ThingSmartShareKit/Build" "${PODS_ROOT}/ThingSmartSocketChannelKit/Build" "${PODS_ROOT}/ThingSmartUtil/Build" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingFoundationKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMachRegister" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingMbedtls" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingOpenSSLSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartBaseKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceCoreKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartDeviceKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartMQTTChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartNetworkKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartShareKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartSocketChannelKit" "${PODS_XCFRAMEWORKS_BUILD_DIR}/ThingSmartUtil"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public"
 OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_ROOT}/Headers/Public/YYModel/YYModel.modulemap"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_DEVELOPMENT_LANGUAGE = ${DEVELOPMENT_LANGUAGE}
 PODS_ROOT = ${SRCROOT}
 PODS_TARGET_SRCROOT = ${PODS_ROOT}/ThingSmartDeviceKit
 PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates

@@ -22,7 +22,10 @@
   "ios": {
     "source_files": "Build/ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*"
   },
-  "resources": "Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle",
+  "resources": [
+    "Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle",
+    "Build/ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg"
+  ],
   "watchos": {
     "source_files": "Build/ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*"
   },

@@ -10,15 +10,13 @@
 		0534EC1B2ABAED1100DD6E7E /* iconfont.json in Resources */ = {isa = PBXBuildFile; fileRef = 0534EC192ABAED1100DD6E7E /* iconfont.json */; };
 		0534EC1C2ABAED1100DD6E7E /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0534EC1A2ABAED1100DD6E7E /* iconfont.ttf */; };
 		0534EC1E2ABAED2800DD6E7E /* Cardcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534EC1D2ABAED2800DD6E7E /* Cardcell.swift */; };
-		0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF096B72AB3F137003C6BDA /* RequestHandler.swift */; };
-		0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0FF096C42AB3F1EB003C6BDA /* Matter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF096C22AB3F1EB003C6BDA /* Matter.storyboard */; };
-		10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */; };
 		2E07DA2B2B21BC7F00A6C444 /* DeviceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E07DA2A2B21BC7F00A6C444 /* DeviceControlViewController.swift */; };
 		2E2128C42B0D55C20061AA25 /* ShuDtxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */; };
 		2E4BE8362B0D9F6A00D17A5A /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */; };
 		2EB622872B1AC7E6006E49C3 /* DeviceListContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB622862B1AC7E6006E49C3 /* DeviceListContainerViewController.swift */; };
 		2EF9495D2B0B428A00E15AD7 /* ShuDtxMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF9495C2B0B428A00E15AD7 /* ShuDtxMain.storyboard */; };
+		318F03A0C5ED9BF0CE31D0D7 /* libPods-SHU DTX10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FF0BEDA844AF045F25CD01 /* libPods-SHU DTX10.a */; };
 		42D0EFDD2ABC49580021AC7E /* DeviceListBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD82ABC49580021AC7E /* DeviceListBaseVC.swift */; };
 		42D0EFDE2ABC49580021AC7E /* DeviceDetailKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFD92ABC49580021AC7E /* DeviceDetailKitVC.swift */; };
 		42D0EFDF2ABC49580021AC7E /* CustomMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D0EFDA2ABC49580021AC7E /* CustomMenuModel.swift */; };
@@ -151,18 +149,7 @@
 		AF96134025B708AE000971CC /* LabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF96133F25B708AE000971CC /* LabelTableViewCell.swift */; };
 		AFBB5BBF25B95BBA006BDDD7 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */; };
 		AFBB5BC225B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */; };
-		ED97D2DDB0B0D535BD4836C0 /* libPods-MatterExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0FF096BA2AB3F137003C6BDA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF5531D425A5992500E13562 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FF096B42AB3F137003C6BDA;
-			remoteInfo = MatterExtension;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0FF096C02AB3F137003C6BDA /* Embed Foundation Extensions */ = {
@@ -171,7 +158,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0FF096BC2AB3F137003C6BDA /* MatterExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -183,12 +169,11 @@
 		0534EC1A2ABAED1100DD6E7E /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		0534EC1D2ABAED2800DD6E7E /* Cardcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cardcell.swift; sourceTree = "<group>"; };
 		0FF096B02AB3F120003C6BDA /* TuyaAppSDKSample-iOS-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TuyaAppSDKSample-iOS-Swift.entitlements"; sourceTree = "<group>"; };
-		0FF096B52AB3F137003C6BDA /* MatterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MatterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF096B72AB3F137003C6BDA /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		0FF096B92AB3F137003C6BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF096C12AB3F13E003C6BDA /* MatterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MatterExtension.entitlements; sourceTree = "<group>"; };
 		0FF096C32AB3F1EB003C6BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Matter.storyboard; sourceTree = "<group>"; };
-		207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		128F6AF8E2DD2268C81210F2 /* Pods-SHU DTX10.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHU DTX10.debug.xcconfig"; path = "Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10.debug.xcconfig"; sourceTree = "<group>"; };
 		2E07DA2A2B21BC7F00A6C444 /* DeviceControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlViewController.swift; sourceTree = "<group>"; };
 		2E2128C32B0D55C20061AA25 /* ShuDtxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuDtxViewController.swift; sourceTree = "<group>"; };
 		2E4BE8352B0D9F6A00D17A5A /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
@@ -217,6 +202,7 @@
 		67956197289A626300BD0FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BETuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		6795619A289A626500BD0FAB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BETuyaLinkBind.strings"; sourceTree = "<group>"; };
 		6795619D289A6AED00BD0FAB /* QRCodeScanerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanerViewController.swift; sourceTree = "<group>"; };
+		7EAFED91E1335E4BF90F79FA /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8239696F2AB05C5400BA2394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeList.storyboard; sourceTree = "<group>"; };
 		823969792AB05D0300BA2394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEHomeManagement.storyboard; sourceTree = "<group>"; };
 		8239697D2AB060CF00BA2394 /* BEHomeManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEHomeManagementViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +248,8 @@
 		82FBA9822AB1A75B00822B41 /* BEDeleteHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEDeleteHomeViewController.swift; sourceTree = "<group>"; };
 		82FBA9882AB1BA7F00822B41 /* BEEditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BEEditHome.storyboard; sourceTree = "<group>"; };
 		82FBA98A2AB1BACD00822B41 /* BEEditHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEditHomeViewController.swift; sourceTree = "<group>"; };
+		887BD64F1AFEB676CD0AE2F8 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
+		97CBA595FEA7029FC8C3E84C /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		9813B69F2AA5E234001646C0 /* DeviceNetworkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNetworkListViewController.swift; sourceTree = "<group>"; };
 		9813B6A22AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TuyaLinkBind.storyboard; sourceTree = "<group>"; };
 		9813B6A42AA71592001646C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/APMode.storyboard; sourceTree = "<group>"; };
@@ -286,14 +274,13 @@
 		9813B6D02AA719E0001646C0 /* DualModeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualModeTableViewController.swift; sourceTree = "<group>"; };
 		9813B6D12AA719E0001646C0 /* TuyaLinkDeviceBindTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuyaLinkDeviceBindTableViewController.swift; sourceTree = "<group>"; };
 		9883F4D22A5FE8A4003202EE /* BETuyaLinkDeviceBindTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BETuyaLinkDeviceBindTableViewController.swift; sourceTree = "<group>"; };
-		98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaAppSDKSample-iOS-Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B4A1EA2AB4620B004D759E /* BEMatterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEMatterTableViewController.swift; sourceTree = "<group>"; };
 		98B4A1ED2AB4622E004D759E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEMatter.storyboard; sourceTree = "<group>"; };
 		98B4A1F52AB462B6004D759E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BEMatter.strings"; sourceTree = "<group>"; };
 		98B4A1F82AB467DA004D759E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Matter.strings"; sourceTree = "<group>"; };
 		98B4A1F92AB46A6C004D759E /* MatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatterViewController.swift; sourceTree = "<group>"; };
 		98B4A1FB2AB7E4AA004D759E /* BEDeviceNetworkListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEDeviceNetworkListViewController.swift; sourceTree = "<group>"; };
-		ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.debug.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		99FF0BEDA844AF045F25CD01 /* libPods-SHU DTX10.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SHU DTX10.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF00605C25EC968A001462B8 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTableViewController.swift; sourceTree = "<group>"; };
 		AF00606025ECBF3A001462B8 /* TemperatureUnitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnitTableViewController.swift; sourceTree = "<group>"; };
 		AF00606625EE638D001462B8 /* BEBLEModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEBLEModeViewController.swift; sourceTree = "<group>"; };
@@ -322,7 +309,7 @@
 		AF3B498625B808D700286C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEEZMode.storyboard; sourceTree = "<group>"; };
 		AF3B498B25B8093600286C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BEAPMode.storyboard; sourceTree = "<group>"; };
 		AF3B499025B8095800286C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DeviceList.storyboard; sourceTree = "<group>"; };
-		AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TuyaAppSDKSample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5531DC25A5992500E13562 /* SHU DTX10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SHU DTX10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5531DF25A5992500E13562 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF5531E125A5992500E13562 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF5531E825A5992800E13562 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -360,25 +347,15 @@
 		AF96133F25B708AE000971CC /* LabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelTableViewCell.swift; path = "TuyaAppSDKSample-iOS-Swift/ViewController/Device Management/Cell/LabelTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		AFBB5BBE25B95BBA006BDDD7 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		AFBB5BC125B95F3C006BDDD7 /* DeviceStatusBehaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatusBehaveCell.swift; sourceTree = "<group>"; };
-		B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; path = "Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatterExtension.release.xcconfig"; path = "Target Support Files/Pods-MatterExtension/Pods-MatterExtension.release.xcconfig"; sourceTree = "<group>"; };
-		DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MatterExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27DD5EEFED65B21C5228813 /* Pods-SHU DTX10.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHU DTX10.release.xcconfig"; path = "Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0FF096B22AB3F137003C6BDA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED97D2DDB0B0D535BD4836C0 /* libPods-MatterExtension.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF5531D925A5992500E13562 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F4AAB953F4FBCFFBD0F199 /* libPods-TuyaAppSDKSample-iOS-Swift.a in Frameworks */,
+				318F03A0C5ED9BF0CE31D0D7 /* libPods-SHU DTX10.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,15 +479,6 @@
 			path = BERoom;
 			sourceTree = "<group>";
 		};
-		87E8F60384D829671393D688 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				98A631D49E2E0E816D32C2CC /* libPods-TuyaAppSDKSample-iOS-Swift.a */,
-				DDBAFF21542EFFA18E0B468D /* libPods-MatterExtension.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9813B69A2AA5DED7001646C0 /* Device Network Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,15 +570,14 @@
 				0FF096B62AB3F137003C6BDA /* MatterExtension */,
 				AF5531DD25A5992500E13562 /* Products */,
 				BD36B163EF3854B6423E5580 /* Pods */,
-				87E8F60384D829671393D688 /* Frameworks */,
+				CA218E4338F963667FDE4C00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		AF5531DD25A5992500E13562 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */,
-				0FF096B52AB3F137003C6BDA /* MatterExtension.appex */,
+				AF5531DC25A5992500E13562 /* SHU DTX10.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -730,55 +697,45 @@
 		BD36B163EF3854B6423E5580 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */,
-				207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */,
-				ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */,
-				CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */,
+				97CBA595FEA7029FC8C3E84C /* Pods-MatterExtension.debug.xcconfig */,
+				887BD64F1AFEB676CD0AE2F8 /* Pods-MatterExtension.release.xcconfig */,
+				128F6AF8E2DD2268C81210F2 /* Pods-SHU DTX10.debug.xcconfig */,
+				B27DD5EEFED65B21C5228813 /* Pods-SHU DTX10.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA218E4338F963667FDE4C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EAFED91E1335E4BF90F79FA /* libPods-MatterExtension.a */,
+				99FF0BEDA844AF045F25CD01 /* libPods-SHU DTX10.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0FF096B42AB3F137003C6BDA /* MatterExtension */ = {
+		AF5531DB25A5992500E13562 /* SHU DTX10 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0FF096BD2AB3F137003C6BDA /* Build configuration list for PBXNativeTarget "MatterExtension" */;
+			buildConfigurationList = AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "SHU DTX10" */;
 			buildPhases = (
-				11BDCDF3B66A04C9B8A6ABDD /* [CP] Check Pods Manifest.lock */,
-				0FF096B12AB3F137003C6BDA /* Sources */,
-				0FF096B22AB3F137003C6BDA /* Frameworks */,
-				0FF096B32AB3F137003C6BDA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MatterExtension;
-			productName = MatterExtension;
-			productReference = 0FF096B52AB3F137003C6BDA /* MatterExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "TuyaAppSDKSample-iOS-Swift" */;
-			buildPhases = (
-				A1B71A9A9659F8885DE3459F /* [CP] Check Pods Manifest.lock */,
+				5CB2C5F70BCFFB36CAD22AB0 /* [CP] Check Pods Manifest.lock */,
 				AF5531D825A5992500E13562 /* Sources */,
 				AF5531D925A5992500E13562 /* Frameworks */,
 				AF5531DA25A5992500E13562 /* Resources */,
-				6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */,
-				C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */,
 				0FF096C02AB3F137003C6BDA /* Embed Foundation Extensions */,
+				63EA68BC803A267EA5A94715 /* [CP] Embed Pods Frameworks */,
+				15738891DAD255E4D21EFD7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0FF096BB2AB3F137003C6BDA /* PBXTargetDependency */,
 			);
-			name = "TuyaAppSDKSample-iOS-Swift";
+			name = "SHU DTX10";
 			productName = "TuyaAppSDKSample-iOS-Swift";
-			productReference = AF5531DC25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift.app */;
+			productReference = AF5531DC25A5992500E13562 /* SHU DTX10.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -790,9 +747,6 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					0FF096B42AB3F137003C6BDA = {
-						CreatedOnToolsVersion = 14.3;
-					};
 					AF5531DB25A5992500E13562 = {
 						CreatedOnToolsVersion = 12.3;
 						LastSwiftMigration = 1340;
@@ -813,20 +767,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF5531DB25A5992500E13562 /* TuyaAppSDKSample-iOS-Swift */,
-				0FF096B42AB3F137003C6BDA /* MatterExtension */,
+				AF5531DB25A5992500E13562 /* SHU DTX10 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0FF096B32AB3F137003C6BDA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF5531DA25A5992500E13562 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -889,46 +835,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11BDCDF3B66A04C9B8A6ABDD /* [CP] Check Pods Manifest.lock */ = {
+		15738891DAD255E4D21EFD7F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MatterExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6E5A55F369AA0968BCF6376C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1B71A9A9659F8885DE3459F /* [CP] Check Pods Manifest.lock */ = {
+		5CB2C5F70BCFFB36CAD22AB0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -943,41 +867,33 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TuyaAppSDKSample-iOS-Swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SHU DTX10-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7EC5A28E342989EDBF2E9AB /* [CP] Embed Pods Frameworks */ = {
+		63EA68BC803A267EA5A94715 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TuyaAppSDKSample-iOS-Swift/Pods-TuyaAppSDKSample-iOS-Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SHU DTX10/Pods-SHU DTX10-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0FF096B12AB3F137003C6BDA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FF096B82AB3F137003C6BDA /* RequestHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF5531D825A5992500E13562 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1075,14 +991,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0FF096BB2AB3F137003C6BDA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0FF096B42AB3F137003C6BDA /* MatterExtension */;
-			targetProxy = 0FF096BA2AB3F137003C6BDA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0FF096C22AB3F1EB003C6BDA /* Matter.storyboard */ = {
@@ -1381,64 +1289,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0FF096BE2AB3F137003C6BDA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADF1C57BE833A3E9DD4D8CFD /* Pods-MatterExtension.debug.xcconfig */;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S9TP7265N8;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MatterExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MatterExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.ios.MatterExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0FF096BF2AB3F137003C6BDA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD69B77163167456846ED615 /* Pods-MatterExtension.release.xcconfig */;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = MatterExtension/MatterExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S9TP7265N8;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MatterExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MatterExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.ios.MatterExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		AF5531EE25A5992800E13562 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1565,7 +1415,7 @@
 		};
 		AF5531F125A5992800E13562 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2A4751A3340941A1C42F4D9 /* Pods-TuyaAppSDKSample-iOS-Swift.debug.xcconfig */;
+			baseConfigurationReference = 128F6AF8E2DD2268C81210F2 /* Pods-SHU DTX10.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1573,7 +1423,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 0.4;
 				DEVELOPMENT_TEAM = S9TP7265N8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1596,13 +1446,13 @@
 				);
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DTX10 App";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = ph.com.bcmconsulting.dtx10app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1613,7 +1463,7 @@
 		};
 		AF5531F225A5992800E13562 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 207E8BAF216CF8ED00C5937A /* Pods-TuyaAppSDKSample-iOS-Swift.release.xcconfig */;
+			baseConfigurationReference = B27DD5EEFED65B21C5228813 /* Pods-SHU DTX10.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1621,7 +1471,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 0.4;
 				DEVELOPMENT_TEAM = S9TP7265N8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1644,13 +1494,13 @@
 				);
 				INFOPLIST_FILE = "TuyaAppSDKSample-iOS-Swift/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DTX10 App";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thingclips.test1001.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = ph.com.bcmconsulting.dtx10app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TuyaAppSDKSample-iOS-Swift/TuyaAppSDKSample-iOS-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1661,15 +1511,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0FF096BD2AB3F137003C6BDA /* Build configuration list for PBXNativeTarget "MatterExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FF096BE2AB3F137003C6BDA /* Debug */,
-				0FF096BF2AB3F137003C6BDA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AF5531D725A5992500E13562 /* Build configuration list for PBXProject "TuyaAppSDKSample-iOS-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1679,7 +1520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "TuyaAppSDKSample-iOS-Swift" */ = {
+		AF5531F025A5992800E13562 /* Build configuration list for PBXNativeTarget "SHU DTX10" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF5531F125A5992800E13562 /* Debug */,

@@ -17,16 +17,16 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "ThingFoundationKit.xcframework/watchos-arm64_i386_x86_64-simulator")
-    echo "simulator"
-    ;;
   "ThingFoundationKit.xcframework/ios-arm64")
     echo ""
+    ;;
+  "ThingFoundationKit.xcframework/ios-arm64_x86_64-simulator")
+    echo "simulator"
     ;;
   "ThingFoundationKit.xcframework/watchos-arm64_arm64_32_armv7k")
     echo ""
     ;;
-  "ThingFoundationKit.xcframework/ios-arm64_x86_64-simulator")
+  "ThingFoundationKit.xcframework/watchos-arm64_i386_x86_64-simulator")
     echo "simulator"
     ;;
   esac
@@ -35,17 +35,17 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
-  "ThingFoundationKit.xcframework/watchos-arm64_i386_x86_64-simulator")
-    echo "arm64 i386 x86_64"
-    ;;
   "ThingFoundationKit.xcframework/ios-arm64")
     echo "arm64"
+    ;;
+  "ThingFoundationKit.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   "ThingFoundationKit.xcframework/watchos-arm64_arm64_32_armv7k")
     echo "arm64 arm64_32 armv7k"
     ;;
-  "ThingFoundationKit.xcframework/ios-arm64_x86_64-simulator")
-    echo "arm64 x86_64"
+  "ThingFoundationKit.xcframework/watchos-arm64_i386_x86_64-simulator")
+    echo "arm64 i386 x86_64"
     ;;
   esac
 }

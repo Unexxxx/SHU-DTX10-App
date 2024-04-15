@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AF5531DB25A5992500E13562"
-               BuildableName = "TuyaAppSDKSample-iOS-Swift.app"
-               BlueprintName = "TuyaAppSDKSample-iOS-Swift"
+               BuildableName = "SHU DTX10.app"
+               BlueprintName = "SHU DTX10"
                ReferencedContainer = "container:TuyaAppSDKSample-iOS-Swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF5531DB25A5992500E13562"
-            BuildableName = "TuyaAppSDKSample-iOS-Swift.app"
-            BlueprintName = "TuyaAppSDKSample-iOS-Swift"
+            BuildableName = "SHU DTX10.app"
+            BlueprintName = "SHU DTX10"
             ReferencedContainer = "container:TuyaAppSDKSample-iOS-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AF5531DB25A5992500E13562"
-            BuildableName = "TuyaAppSDKSample-iOS-Swift.app"
-            BlueprintName = "TuyaAppSDKSample-iOS-Swift"
+            BuildableName = "SHU DTX10.app"
+            BlueprintName = "SHU DTX10"
             ReferencedContainer = "container:TuyaAppSDKSample-iOS-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

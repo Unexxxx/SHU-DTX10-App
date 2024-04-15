@@ -25,12 +25,16 @@
 			<string>com.thingclips.test1001.ios</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>dtx10app</string>
+				<string>dtx10</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>dtx10</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>

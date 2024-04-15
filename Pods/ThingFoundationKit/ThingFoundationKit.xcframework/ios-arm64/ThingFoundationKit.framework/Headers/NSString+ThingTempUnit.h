@@ -9,6 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+FOUNDATION_EXTERN NSString * const thing_celsius;
+FOUNDATION_EXTERN NSString * const thing_fahrenheit;
+
 @interface NSString (ThingTempUnit)
 
 - (BOOL)thing_celsiusUnit;

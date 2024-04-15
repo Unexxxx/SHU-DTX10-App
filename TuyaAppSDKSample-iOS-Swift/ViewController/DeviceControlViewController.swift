@@ -7,6 +7,9 @@
 import UIKit
 import NotificationCenter
 import ThingSmartDeviceKit
+import ThingSmartBLEKit
+import ThingSmartFamilyBizKit
+import ThingSmartDeviceCoreKit
 
 @available(iOS 13.0, *)
 class DeviceControlViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -18,20 +21,44 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var viewDistance: UIView!
     @IBOutlet var distanceMeter: UITextField!
     @IBOutlet var deviceOffline: UILabel!
+    @IBOutlet weak var sendButton: UIButton!
+    
+    var centralManager: CBCentralManager!
+    
     var metersValue = 0.0 {
         didSet {
-            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
-                     showAlert(message: "URL Scheme not set.")
-                     return
-                  }
-                  
-                  let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
-                  
-                  if let url = URL(string: updatedURLScheme) {
-                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                  } else {
-                     showAlert(message: "Something's wrong with the URL Scheme.")
-                  }
+            guard metersValue != 0 else {
+                return
+            }
+            
+            var savedURLScheme: String
+//            guard var savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
+//                showAlert(message: "URL Scheme not set.")
+//                return
+//            }
+            
+            var parameter: String
+//            guard var parameter = UserDefaults.standard.string(forKey: "schemeParameter") else {
+//                showAlert(message: "No parameters set")
+//                return
+//            }
+            
+            guard let fileName = UserDefaults.standard.string(forKey: "fileName") else {
+                return
+            }
+            
+//            savedURLScheme.append("\(fileName)?script=BT_Measure&\(parameter)&$value=\(metersValue)")
+            parameter = "opening__OPENINGITEM__SELECTED::value"
+            savedURLScheme = "fmp://$/SHU_LHP_mainDB?script=BT_Measure&\(parameter)&$value=\(metersValue)"
+            
+            if let url = URL(string: savedURLScheme) {
+                UIApplication.shared.open(url, options: [:], completionHandler: {_ in
+                    UserDefaults.standard.removeObject(forKey: "schemeParameter")
+                })
+                
+            } else {
+                showAlert(message: "Something's wrong with the URL Scheme.")
+            }
         }
     }
     
@@ -39,14 +66,34 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        sendButton.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         distanceMeter.delegate = self
         tableView.register(SwitchTableViewCell.self, forCellReuseIdentifier: "SwitchCell")
         view.addSubview(tableView)
         device?.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(deviceHasRemoved(_:)), name: .SVProgressHUDDidDisappear, object: nil)
         
+        
+        // re-connect the device whenever it got disconnected
+        NotificationCenter.default.addObserver(self, selector: #selector(connectDevice), name: .reconnectDevice, object: nil)
+        
+        for schema in device?.deviceModel.schemaArray ?? [] {
+            let cellIdentifier = DeviceControlCell.cellIdentifier(with: schema)
+            
+            switch cellIdentifier {
+            case .sliderCell:
+                guard let dps = device?.deviceModel.dps,
+                      let dpID = schema.dpId,
+                      let value = dps[dpID] as? Int
+                else { break }
+                
+                let metersValue = Double(value) / 1000.0
+                targetSchemaModel = schema
+            default:
+                break
+            }
+        }
         
         let gearIcon = UIImage(systemName: "gear")
         let gearButton = UIBarButtonItem(image: gearIcon, style: .plain, target: self, action: #selector(urlSchemeTapped))
@@ -62,6 +109,7 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         distanceMeter.isEnabled = true
         distanceMeter.font = UIFont.systemFont(ofSize: 50)
         distanceMeter.adjustsFontSizeToFitWidth = false
+        distanceMeter.text = "0.00"
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -70,12 +118,39 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
         toolbar.items = [flexibleSpace, doneButton]
         distanceMeter.inputAccessoryView = toolbar
-        
-        detectDeviceAvailability()
-        
-        tableView.addObserver(self, forKeyPath: "reloadData", options: .new, context: nil)
 
+        // This makes sure that the device is connected always whenever we open the measurement screen
+        centralManager = CBCentralManager(delegate: self, queue: nil, options: nil)
+        ThingSmartBLEManager.sharedInstance().delegate = self
+        ThingSmartBLEManager.sharedInstance().startListening(true)
+        detectDeviceAvailability()
+        tableView.addObserver(self, forKeyPath: "reloadData", options: .new, context: nil)
     }
+    
+    @objc func connectDevice() {
+        SVProgressHUD.show(withStatus: "Connecting to \(device?.deviceModel.name ?? "")")
+        self.connect()
+    }
+    
+    // retries is set 3 times by default.
+    private func connect(retryCount: Int = 3) {
+        ThingSmartBLEManager.sharedInstance().connectBLE(withUUID: device!.deviceModel.uuid, productKey: device!.deviceModel.productId) {
+            SVProgressHUD.dismiss()
+            self.detectDeviceAvailability()
+        } failure: { [weak self] in
+            guard let self = self else { return }
+            
+            if retryCount > 0 {
+                print("Connection failed, attempting retry \(retryCount)")
+                self.connect(retryCount: retryCount - 1)
+            } else {
+                print("Connection failed after retries")
+                self.detectDeviceAvailability()
+                SVProgressHUD.dismiss()
+            }
+        }
+    }
+
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 
@@ -90,27 +165,25 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
         return formattedDistance
 
     }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        SVProgressHUD.dismiss()
-        NotificationCenter.default.removeObserver(self, name: .SVProgressHUDDidDisappear, object: nil)
-    }
-    
     
     // MARK: -  Private Method
     
     private func detectDeviceAvailability() {
-        if let isOnline = device?.deviceModel.isOnline, isOnline {
-            NotificationCenter.default.post(name: .deviceOnline, object: nil)
-//            SVProgressHUD.dismiss()
-            deviceOffline.isHidden = true
+        DispatchQueue.main.async { [weak self] in
+            guard let self else {
+                return
+            }
             
-        } else {
-            NotificationCenter.default.post(name: .deviceOffline, object: nil)
-//            SVProgressHUD.show(withStatus: NSLocalizedString("The device is offline. The control panel is unavailable.", comment: ""))
-            deviceOffline.isHidden = false
+            if let isOnline = self.device?.deviceModel.isOnline, isOnline {
+                SVProgressHUD.dismiss()
+                self.deviceOffline.isHidden = true
+                self.sendButton.isHidden = true
+                
+            } else {
+    //            SVProgressHUD.show(withStatus: NSLocalizedString("The device is offline. The control panel is unavailable.", comment: ""))
+                self.deviceOffline.isHidden = false
+                self.sendButton.isHidden = false
+            }
         }
     }
     
@@ -124,6 +197,7 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
             SVProgressHUD.showError(withStatus: errorMessage)
         })
     }
+    
     @IBAction func removeDeviceTapped(_ sender: UIButton) {
         let removeAction = UIAlertAction(title: NSLocalizedString("Remove", comment: "Perform remove device action"), style: .destructive) { [weak self] (action) in
             guard let self = self else { return }
@@ -152,23 +226,7 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func sendButton(_ sender: Any) {
-//        // Retrieve the URL scheme from UserDefaults
-//            guard let savedURLScheme = UserDefaults.standard.string(forKey: "urlScheme") else {
-//                // Handle the case where the URL scheme is not available
-//                showAlert(message: "URL Scheme not set. Please set a URL Scheme in the settings.")
-//                return
-//            }
-//        
-//        let updatedURLScheme = savedURLScheme.replacingOccurrences(of: "<<VALUE>>", with: "\(metersValue)")
-//        
-//        // Create a URL using the scheme
-//        if let url = URL(string: "\(updatedURLScheme)") {
-//            // Open the app corresponding to the URL scheme
-//            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//        } else {
-//            // Handle the case where the app cannot be opened
-//            showAlert(message: "Something's wrong with the URL Scheme.")
-//        }
+        connect()
     }
     
     func showAlert(message: String) {
@@ -236,7 +294,10 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let defaultCell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        guard let device = device else { return defaultCell }
+        guard let device = device else { 
+            print("no device")
+            return defaultCell
+        }
 
         let schema = targetSchemaModel != nil ? targetSchemaModel! : device.deviceModel.schemaArray[indexPath.row]
         let dps = device.deviceModel.dps
@@ -277,8 +338,8 @@ class DeviceControlViewController: UIViewController, UITableViewDelegate, UITabl
                   let value = dps[dpID] as? Int
             else { break }
             
-            metersValue = Double(value) / 1000.0
-            
+            let metersValue = Double(value) / 1000.0
+            targetSchemaModel = schema
             cell.label.text = schema.name
             cell.label.text = "Current Distance"
             cell.detailLabel.text = String(format: "%.3f", metersValue)
@@ -384,9 +445,15 @@ extension DeviceControlViewController: ThingSmartDeviceDelegate {
         SVProgressHUD.showError(withStatus: NSLocalizedString("The device has been removed.", comment: ""))
     }
     
+    // This gets called when the device got a measurement
     func device(_ device: ThingSmartDevice, dpsUpdate dps: [AnyHashable : Any]) {
         detectDeviceAvailability()
         tableView.reloadData()
+        
+        if let dpID = targetSchemaModel?.dpId, let value = dps[dpID] as? Int {
+            metersValue = Double(value) / 1000.0
+            distanceMeter.text = metersValue.description
+        }
     }
 }
 
@@ -406,5 +473,21 @@ extension DeviceControlViewController: UITextFieldDelegate {
             }
         }
         return newText.count <= 10
+    }
+}
+
+extension DeviceControlViewController: ThingSmartBLEManagerDelegate, CBCentralManagerDelegate {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == .poweredOn {
+            SVProgressHUD.show(withStatus: "Connecting to \(device?.deviceModel.name ?? "")")
+            connect()
+        } else {
+            deviceOffline.isHidden = false
+            sendButton.isHidden = false
+        }
+    }
+    
+    func bluetoothDidUpdateState(_ isPoweredOn: Bool) {
+ 
     }
 }

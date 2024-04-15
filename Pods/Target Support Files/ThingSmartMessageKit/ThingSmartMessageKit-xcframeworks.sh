@@ -20,14 +20,14 @@ variant_for_slice()
   "ThingSmartMessageKit.xcframework/ios-arm64")
     echo ""
     ;;
-  "ThingSmartMessageKit.xcframework/watchos-arm64_i386_x86_64-simulator")
-    echo "simulator"
-    ;;
   "ThingSmartMessageKit.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   "ThingSmartMessageKit.xcframework/watchos-arm64_arm64_32_armv7k")
     echo ""
+    ;;
+  "ThingSmartMessageKit.xcframework/watchos-arm64_i386_x86_64-simulator")
+    echo "simulator"
     ;;
   esac
 }
@@ -38,14 +38,14 @@ archs_for_slice()
   "ThingSmartMessageKit.xcframework/ios-arm64")
     echo "arm64"
     ;;
-  "ThingSmartMessageKit.xcframework/watchos-arm64_i386_x86_64-simulator")
-    echo "arm64 i386 x86_64"
-    ;;
   "ThingSmartMessageKit.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   "ThingSmartMessageKit.xcframework/watchos-arm64_arm64_32_armv7k")
     echo "arm64 arm64_32 armv7k"
+    ;;
+  "ThingSmartMessageKit.xcframework/watchos-arm64_i386_x86_64-simulator")
+    echo "arm64 i386 x86_64"
     ;;
   esac
 }

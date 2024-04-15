@@ -17,6 +17,9 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
+  "ThingSmartNetworkKit.xcframework/ios-arm64")
+    echo ""
+    ;;
   "ThingSmartNetworkKit.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
@@ -26,15 +29,15 @@ variant_for_slice()
   "ThingSmartNetworkKit.xcframework/watchos-arm64_i386_x86_64-simulator")
     echo "simulator"
     ;;
-  "ThingSmartNetworkKit.xcframework/ios-arm64")
-    echo ""
-    ;;
   esac
 }
 
 archs_for_slice()
 {
   case "$1" in
+  "ThingSmartNetworkKit.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
   "ThingSmartNetworkKit.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
@@ -43,9 +46,6 @@ archs_for_slice()
     ;;
   "ThingSmartNetworkKit.xcframework/watchos-arm64_i386_x86_64-simulator")
     echo "arm64 i386 x86_64"
-    ;;
-  "ThingSmartNetworkKit.xcframework/ios-arm64")
-    echo "arm64"
     ;;
   esac
 }
@@ -129,5 +129,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/ThingSmartNetworkKit/Build/ThingSmartNetworkKit.xcframework" "ThingSmartNetworkKit" "framework" "ios-arm64_x86_64-simulator" "ios-arm64"
+install_xcframework "${PODS_ROOT}/ThingSmartNetworkKit/Build/ThingSmartNetworkKit.xcframework" "ThingSmartNetworkKit" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 

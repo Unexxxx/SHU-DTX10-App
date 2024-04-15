@@ -11,15 +11,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSURL (ThingPrefs)
 
-+ (NSURL *)thing_appPrefsWifi;
-+ (NSURL *)thing_appPrefsBLE;
-+ (NSURL *)thing_appPrefsLocation;
+/// Open the Settings page for the specified app in iOS Settings App
++ (NSURL *_Nullable)thing_appPrefsApplicationSetting NS_AVAILABLE_IOS(8.0);
 
-+ (NSURL *)thing_iOSDefaultSettings;
+/// App’s notification settings in the Settings app
++ (NSURL *_Nullable)thing_notificationSettings;
 
-+ (NSURL *)thing_appPrefsApplicationSetting NS_AVAILABLE_IOS(8.0);
+#pragma mark - deprecated
 
-+ (NSURL *)thing_prefsUrlWithQuery:(NSDictionary *)query;
++ (NSURL *_Nullable)thing_appPrefsWifi __deprecated_msg("This method is deprecated, Use -thing_appPrefsApplicationSetting instead");
++ (NSURL *_Nullable)thing_appPrefsBLE __deprecated_msg("This method is deprecated, Use -thing_appPrefsApplicationSetting instead");;
++ (NSURL *_Nullable)thing_appPrefsLocation __deprecated_msg("This method is deprecated, Use -thing_appPrefsApplicationSetting instead");;
++ (NSURL *_Nullable)thing_iOSDefaultSettings __deprecated_msg("This method is deprecated, Use -thing_appPrefsApplicationSetting instead");;
++ (NSURL *_Nullable)thing_prefsUrlWithQuery:(NSDictionary *)query  __deprecated_msg("This method is deprecated, Use -thing_appPrefsApplicationSetting instead");;
 
 @end
 

@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
 
   s.ios.source_files = 'Build/ThingSmartCryption.xcframework/ios*simulator/ThingSmartCryption.framework/Headers/*'
-  s.resources = 'Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle'
+  s.resources = ['Build/ThingSmartCryption.xcframework/ios*simulator/**/*.bundle', 'Build/ThingSmartCryption.xcframework/ios*simulator/**/t_cdc.tcfg']
 
   s.watchos.source_files = 'Build/ThingSmartCryption.xcframework/watchos*simulator/ThingSmartCryption.framework/Headers/*'
 

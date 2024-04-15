@@ -210,7 +210,7 @@
 		</data>
 		<key>Headers/NSString+ThingTempUnit.h</key>
 		<data>
-		tsgJrB6ITZvKEx8GOCOCgByE9Ro=
+		ruUhubnWA/W0Ta3N3vyEYW/19lk=
 		</data>
 		<key>Headers/NSString+ThingTrim.h</key>
 		<data>
@@ -242,7 +242,7 @@
 		</data>
 		<key>Headers/NSURL+ThingPrefs.h</key>
 		<data>
-		J5V6aWfU0BQ18e5PDSpSnrfs3Kk=
+		UDXDTckjeb92SIO3+K28Ua67/YM=
 		</data>
 		<key>Headers/Reachability+ThingNetwork.h</key>
 		<data>
@@ -306,7 +306,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		b0h0vfzt8MvHzAhu97uEW//8mC4=
+		DZrZbtAJsbK22RmKF/d9Ffuan9k=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -880,11 +880,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tsgJrB6ITZvKEx8GOCOCgByE9Ro=
+			ruUhubnWA/W0Ta3N3vyEYW/19lk=
 			</data>
 			<key>hash2</key>
 			<data>
-			LFQqgXbc8nXjM9/HiUPhhaHQPwwQnExlXQASibiJ24c=
+			f9KGF5JDWz+vc7hQnM79Leh4KjPjTIj4rfHfPlTeK5g=
 			</data>
 		</dict>
 		<key>Headers/NSString+ThingTrim.h</key>
@@ -968,11 +968,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J5V6aWfU0BQ18e5PDSpSnrfs3Kk=
+			UDXDTckjeb92SIO3+K28Ua67/YM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yVuQiVBLDdZ5nZK6zSA8N18C1cGpIxi4vfk4fUCzs7k=
+			uP1oqfqXvKvWgWv0OJMMetXKrs8pSs3xynlwjTNIZjs=
 			</data>
 		</dict>
 		<key>Headers/Reachability+ThingNetwork.h</key>

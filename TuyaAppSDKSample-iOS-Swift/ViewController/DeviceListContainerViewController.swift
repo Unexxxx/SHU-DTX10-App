@@ -25,13 +25,21 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
 
         viewModelList = []
         
-        if Home.current != nil {
-            home = ThingSmartHome(homeId: Home.current!.homeId)
+        if let currentHome = Home.current {
+            home = ThingSmartHome(homeId: currentHome.homeId)
             home?.delegate = self
             updateHomeDetail()
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(moveToDeviceDetails), name: .goToDetails, object: nil)
     }
 
+    @objc func moveToDeviceDetails() {
+        if UserDefaults.standard.string(forKey: "schemeParameter") != nil, let viewModel = viewModelList.first {
+            clickCardView(viewModel: viewModel)
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,6 +51,7 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
             viewModel.device = ThingSmartDevice(deviceId: deviceModel.devId)
             viewModel.name = deviceModel.name
             viewModel.icon = deviceModel.iconUrl
+            
             viewModelList.append(viewModel)
         })
 
@@ -138,14 +147,14 @@ class DeviceListContainerViewController: UITableViewController, CardCellDelegate
         
         let vc = storyboard.instantiateViewController(withIdentifier: identifier)
         if isSupportThingModel {
-                let thingLinkVC = vc as! ThingLinkDeviceControlController
-                jumpThingLinkDeviceControl(thingLinkVC, device: device)
-            } else {
-                if let deviceControlVC = vc as? DeviceControlViewController {
-                    deviceControlVC.targetSchemaModel = smartDp?.schemaModel
-                    jumpNormalDeviceControl(deviceControlVC, device: device)
-                }
+            let thingLinkVC = vc as! ThingLinkDeviceControlController
+            jumpThingLinkDeviceControl(thingLinkVC, device: device)
+        } else {
+            if let deviceControlVC = vc as? DeviceControlViewController {
+                deviceControlVC.targetSchemaModel = smartDp?.schemaModel
+                jumpNormalDeviceControl(deviceControlVC, device: device)
             }
+        }
     }
 }
 

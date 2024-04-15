@@ -9,4 +9,6 @@ import Foundation
 extension NSNotification.Name {
     static let deviceOffline = NSNotification.Name.init("deviceOffline")
     static let deviceOnline = NSNotification.Name.init("deviceOnline")
+    static let goToDetails = NSNotification.Name.init("goToDetails")
+    static let reconnectDevice = NSNotification.Name.init("reconnectDevice")
 }

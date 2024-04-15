@@ -17,17 +17,17 @@ RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
 variant_for_slice()
 {
   case "$1" in
-  "ThingStorageGroupInterface.xcframework/ios-arm64_x86_64-simulator")
-    echo "simulator"
+  "ThingStorageGroupInterface.xcframework/ios-arm64")
+    echo ""
     ;;
-  "ThingStorageGroupInterface.xcframework/watchos-arm64_i386_x86_64-simulator")
+  "ThingStorageGroupInterface.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
   "ThingStorageGroupInterface.xcframework/watchos-arm64_arm64_32_armv7k")
     echo ""
     ;;
-  "ThingStorageGroupInterface.xcframework/ios-arm64")
-    echo ""
+  "ThingStorageGroupInterface.xcframework/watchos-arm64_i386_x86_64-simulator")
+    echo "simulator"
     ;;
   esac
 }
@@ -35,17 +35,17 @@ variant_for_slice()
 archs_for_slice()
 {
   case "$1" in
+  "ThingStorageGroupInterface.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
   "ThingStorageGroupInterface.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
-    ;;
-  "ThingStorageGroupInterface.xcframework/watchos-arm64_i386_x86_64-simulator")
-    echo "arm64 i386 x86_64"
     ;;
   "ThingStorageGroupInterface.xcframework/watchos-arm64_arm64_32_armv7k")
     echo "arm64 arm64_32 armv7k"
     ;;
-  "ThingStorageGroupInterface.xcframework/ios-arm64")
-    echo "arm64"
+  "ThingStorageGroupInterface.xcframework/watchos-arm64_i386_x86_64-simulator")
+    echo "arm64 i386 x86_64"
     ;;
   esac
 }
@@ -129,5 +129,5 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/ThingStorageGroupInterface/ThingStorageGroupInterface.xcframework" "ThingStorageGroupInterface" "framework" "ios-arm64_x86_64-simulator" "ios-arm64"
+install_xcframework "${PODS_ROOT}/ThingStorageGroupInterface/ThingStorageGroupInterface.xcframework" "ThingStorageGroupInterface" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 
